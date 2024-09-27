@@ -1,6 +1,6 @@
 import * as S from '@/styles/layout/HeaderStyle';
-import LogoIcon from '@icons/header/Logo.svg?react';
-import SaerLogoIcon from '@icons/header/SaerLogo.svg?react';
+import LogoIcon from '@icons/logo/Logo.svg?react';
+import SaerLogoIcon from '@icons/logo/SaerLogo.svg?react';
 import ChevronLeftBigIcon from '@icons/header/ChevronLeftBig.svg?react';
 
 const Header = () => {

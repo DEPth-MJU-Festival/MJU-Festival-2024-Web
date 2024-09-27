@@ -1,5 +1,5 @@
 import * as S from '@/styles/layout/FooterStyle';
-import DEPthLogoIcon from '@icons/footer/DEPthLogo.svg?react';
+import DEPthLogoIcon from '@icons/logo/DEPthLogo.svg?react';
 import LinkIcon from '@icons/footer/Link.svg?react';
 import GithubIcon from '@icons/footer/Github.svg?react';
 import InstagramIcon from '@icons/footer/Instagram.svg?react';
