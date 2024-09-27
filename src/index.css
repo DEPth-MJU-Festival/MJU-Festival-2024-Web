@@ -23,8 +23,8 @@
 }
 
 @font-face {
-  font-family: 'GmarketSansMedium';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+  font-family: 'GmarketSans';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSans.woff')
     format('woff');
   font-weight: normal;
   font-style: normal;
@@ -36,6 +36,54 @@
     format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 300;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 500;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf')
+      format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GmarketSans';
+  font-weight: 700;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff')
+      format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf')
+      format('truetype');
+  font-display: swap;
 }
 
 :root {
@@ -52,23 +100,23 @@
   --SaeroGreen: #d5ebde;
   --SaeroGreen2: #8db9b6;
   --NoticeTitle: 400 16px / normal HS-Regular;
-  --NoticeSubtitle: 500 12px / 15px GmarketSansMedium;
-  --NoticeTime: 400 12px / 160% GmarketSansMedium;
+  --NoticeSubtitle: 500 12px / 15px GmarketSans;
+  --NoticeTime: 500 12px / 160% GmarketSans;
   --SigerName: 400 24px / normal HS-Regular;
-  --NaviFocus: 500 13px / 160% GmarketSansMedium;
-  --NaviDefault: 400 13px / 160% GmarketSansMedium;
-  --TapFocus: 500 16px / 160% GmarketSansMedium;
-  --TapDefault: 400 16px / 150% GmarketSansMedium;
-  --ButtonText: 400 16px / 120% GmarketSansMedium;
-  --MainText: 500 20px / 160% GmarketSansMedium;
-  --HeaderG: 500 16px / 140% GmarketSansMedium;
+  --NaviFocus: 700 13px / 160% GmarketSans;
+  --NaviDefault: 500 13px / 160% GmarketSans;
+  --TapFocus: 700 16px / 160% GmarketSans;
+  --TapDefault: 500 16px / 150% GmarketSans;
+  --ButtonText: 500 16px / 120% GmarketSans;
+  --MainText: 500 20px / 160% GmarketSans;
+  --HeaderG: 500 16px / 140% GmarketSans;
   --HeaderN: 700 16px / 140% Noto Sans KR;
   --Title: 700 20px / 140% Noto Sans KR;
   --BodyText: 400 13px / 120% Noto Sans KR;
-  --SubText: 300 14px / 120% GmarketSansMedium;
+  --SubText: 300 14px / 120% GmarketSans;
   --Caption: 400 11px / 160% Noto Sans KR;
   --Footer: 400 14px / 120% Noto Sans KR;
-  --TitlePage: 500 24px / 140% GmarketSansMedium;
+  --TitlePage: 500 24px / 140% GmarketSans;
 }
 
 html,
