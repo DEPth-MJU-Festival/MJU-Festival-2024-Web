@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import * as S from '@/styles/layout/LayoutStyle';
+import * as S from '@styles/layout/LayoutStyle';
 import BannerImg from '@images/main/Banner.png';
 import Header from './Header';
 import Footer from './Footer';
