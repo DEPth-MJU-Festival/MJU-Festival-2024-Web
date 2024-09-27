@@ -4,7 +4,7 @@ export const Container = styled.div`
   margin: 0 auto;
   //max-width: 390px;
   min-height: 100dvh;
-  background-color: var(--White);
+  background: var(--WhiteSmoke);
   display: flex;
   flex-direction: column;
 `;
