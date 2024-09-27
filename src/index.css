@@ -1,0 +1,204 @@
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2)
+      format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff)
+      format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf)
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2)
+      format('woff2'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff)
+      format('woff'),
+    url(//fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf)
+      format('opentype');
+}
+
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HS-Regular';
+  src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --White: #ffffff;
+  --WhiteSmoke: #fbfbfd;
+  --WarmWhite: #fffcf7;
+  --PaleYellow: #fef5a2;
+  --PaleBlue: #d9e0f0;
+  --PastelBlue: #a8b9e0;
+  --SoftBlue: #7d94ca;
+  --DeepBlue: #4d688a;
+  --BlueBlack: #1a2530;
+  --MistGray: #808080;
+  --SaeroGreen: #d5ebde;
+  --SaeroGreen2: #8db9b6;
+  --NoticeTitle: 400 16px / normal HS-Regular;
+  --NoticeSubtitle: 500 12px / 15px GmarketSansMedium;
+  --NoticeTime: 400 12px / 160% GmarketSansMedium;
+  --SigerName: 400 24px / normal HS-Regular;
+  --NaviFocus: 500 13px / 160% GmarketSansMedium;
+  --NaviDefault: 400 13px / 160% GmarketSansMedium;
+  --TapFocus: 500 16px / 160% GmarketSansMedium;
+  --TapDefault: 400 16px / 150% GmarketSansMedium;
+  --ButtonText: 400 16px / 120% GmarketSansMedium;
+  --MainText: 500 20px / 160% GmarketSansMedium;
+  --HeaderG: 500 16px / 140% GmarketSansMedium;
+  --HeaderN: 700 16px / 140% Noto Sans KR;
+  --Title: 700 20px / 140% Noto Sans KR;
+  --BodyText: 400 13px / 120% Noto Sans KR;
+  --SubText: 300 14px / 120% GmarketSansMedium;
+  --Caption: 400 11px / 160% Noto Sans KR;
+  --Footer: 400 14px / 120% Noto Sans KR;
+  --TitlePage: 500 24px / 140% GmarketSansMedium;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-size: 100%;
+}
+
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
