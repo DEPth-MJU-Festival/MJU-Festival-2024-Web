@@ -2,9 +2,21 @@ import * as S from '@styles/main/MainPageStyle';
 import NoticeBtn from '@components/main/NoticeBtn';
 import NavigationBar from '@components/main/NavigationBar';
 import { useState } from 'react';
+import MainTab from '@/components/main/MainTab';
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(0);
+
+  const renderTab = () => {
+    switch (selectedBar) {
+      case 0:
+        return <MainTab />;
+      case 1:
+        return <MainTab />;
+      default:
+        return <MainTab />;
+    }
+  };
 
   return (
     <div>
@@ -15,7 +27,7 @@ const MainPage = () => {
         selectedBar={selectedBar}
         setSelectedBar={setSelectedBar}
       />
-      <div style={{ height: 1300 }}></div>
+      {renderTab()}
     </div>
   );
 };

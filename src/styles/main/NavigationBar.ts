@@ -12,6 +12,7 @@ export const Container = styled.div`
   overflow-x: auto;
   white-space: nowrap;
   margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const NavigationWrap = styled.div<{ $selected: boolean }>`
@@ -74,6 +75,7 @@ export const NavigationText = styled.div<{ $selected: boolean }>`
   text-align: center;
   user-select: none;
   white-space: pre-wrap;
+
   font: ${props =>
     props.$selected ? 'var(--NaviFocus)' : 'var(--NaviDefault)'};
 
