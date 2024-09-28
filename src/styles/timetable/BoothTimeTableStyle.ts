@@ -8,30 +8,6 @@ export const Container = styled.div`
   position: relative;
 `;
 
-const IconPosition = styled.div`
-  position: absolute;
-`;
-
-export const LeftTop = styled(IconPosition)`
-  top: 4px;
-  left: 4px;
-`;
-
-export const RightTop = styled(IconPosition)`
-  top: 4px;
-  right: 4px;
-`;
-
-export const RightBottom = styled(IconPosition)`
-  bottom: 0;
-  right: 4px;
-`;
-
-export const LeftBottom = styled(IconPosition)`
-  bottom: 0;
-  left: 4px;
-`;
-
 export const NoticeTitle = styled.div`
   font: var(--NoticeTitle);
   color: var(--PaleYellow);

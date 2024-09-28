@@ -4,6 +4,7 @@ import NavigationBar from '@components/main/NavigationBar';
 import { useState } from 'react';
 import MainTab from '@components/main/MainTab';
 import TimeTableTab from '@components/timetable/TimeTableTab';
+import LineupTab from '@/components/lineup/LineupTab';
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(0);
@@ -14,6 +15,8 @@ const MainPage = () => {
         return <MainTab />;
       case 1:
         return <TimeTableTab />;
+      case 2:
+        return <LineupTab />;
       default:
         return <MainTab />;
     }

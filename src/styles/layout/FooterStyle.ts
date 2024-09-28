@@ -13,7 +13,8 @@ export const Container = styled.div`
   > hr {
     margin: 20px 45px;
     width: 90%;
-    border: 0.78px solid var(--PaleYellow);
+    border: none;
+    border-bottom: 1px solid var(--PaleYellow);
   }
 
   > span {
