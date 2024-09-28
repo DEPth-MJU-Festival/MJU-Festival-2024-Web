@@ -2,7 +2,8 @@ import * as S from '@styles/main/MainPageStyle';
 import NoticeBtn from '@components/main/NoticeBtn';
 import NavigationBar from '@components/main/NavigationBar';
 import { useState } from 'react';
-import MainTab from '@/components/main/MainTab';
+import MainTab from '@components/main/MainTab';
+import TimeTableTab from '@components/timetable/TimeTableTab';
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(0);
@@ -12,7 +13,7 @@ const MainPage = () => {
       case 0:
         return <MainTab />;
       case 1:
-        return <MainTab />;
+        return <TimeTableTab />;
       default:
         return <MainTab />;
     }

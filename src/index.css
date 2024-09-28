@@ -23,17 +23,9 @@
 }
 
 @font-face {
-  font-family: 'GmarketSans';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSans.woff')
-    format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HS-Regular';
-  src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff')
-    format('woff');
+  font-family: 'HSSanTokki20-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2405@1.0/HSSanTokki20-Regular.woff2')
+    format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -99,10 +91,10 @@
   --MistGray: #808080;
   --SaeroGreen: #d5ebde;
   --SaeroGreen2: #8db9b6;
-  --NoticeTitle: 400 16px / normal HS-Regular;
-  --NoticeSubtitle: 500 12px / 15px GmarketSans;
+  --NoticeTitle: 400 16px / normal HSSanTokki20-Regular;
+  --NoticeSubtitle: 700 12px / 15px GmarketSans;
   --NoticeTime: 500 12px / 160% GmarketSans;
-  --SigerName: 400 24px / normal HS-Regular;
+  --SigerName: 400 24px / normal HSSanTokki20-Regular;
   --NaviFocus: 700 13px / 160% GmarketSans;
   --NaviDefault: 500 13px / 160% GmarketSans;
   --TapFocus: 700 16px / 160% GmarketSans;
@@ -234,6 +226,10 @@ button {
 
 button:disabled {
   cursor: auto;
+}
+
+img {
+  vertical-align: bottom;
 }
 
 * {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TextWrap = styled.div`
   user-select: none;
   white-space: pre-wrap;
-  margin: 53px 18px 60px;
+  margin: 60px 18px;
   border-radius: 6px;
   background-color: var(--White);
   filter: drop-shadow(0px 0px 8px rgba(141, 166, 212, 0.3));

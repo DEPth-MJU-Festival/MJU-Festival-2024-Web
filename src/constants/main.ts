@@ -1,6 +1,4 @@
-import { TNavigationBarItem } from '@/types/main';
-
-export const NavigationBarItem: TNavigationBarItem[] = [
+export const NavigationBarItem = [
   { id: 0, text: '축제\n소개' },
   { id: 1, text: '타임\n테이블' },
   { id: 2, text: '라인업' },
