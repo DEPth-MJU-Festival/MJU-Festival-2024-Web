@@ -9,6 +9,7 @@ export const Container = styled.div`
 
   position: sticky;
   top: 0;
+  z-index: 100;
 `;
 
 export const RightWrap = styled.div`
