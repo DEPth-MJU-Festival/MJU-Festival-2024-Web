@@ -22,6 +22,17 @@ import MyeongjiTomorrowImg from '@images/boothfood/CampusOrganizationBooth/Myeon
 import DonghwaDahmImg from '@images/boothfood/CampusOrganizationBooth/DonghwaDahm.png';
 import NightBoothImg from '@images/boothfood/NightBooth/NightBooth.png';
 
+import BeefBibimbapImg from '@images/boothfood/FoodTruck/BeefBibimbap.png';
+import ChickenGangjeongImg from '@images/boothfood/FoodTruck/ChickenGangjeong.png';
+import SundaeGopchangImg from '@images/boothfood/FoodTruck/SundaeGopchang.png';
+import ChurrosImg from '@images/boothfood/FoodTruck/Churros.png';
+import ChickenSkewersImg from '@images/boothfood/FoodTruck/ChickenSkewers.png';
+import TakoyakiImg from '@images/boothfood/FoodTruck/Takoyaki.png';
+import CrepeImg from '@images/boothfood/FoodTruck/Crepe.png';
+import YakisobaImg from '@images/boothfood/FoodTruck/Yakisoba.png';
+import SteakImg from '@images/boothfood/FoodTruck/Steak.png';
+import CoffeeImg from '@images/boothfood/FoodTruck/Coffee.png';
+
 export const BoothItemList = [
   {
     id: 1,
@@ -206,5 +217,71 @@ export const BoothItemList = [
         location: '미래융합관 앞',
       },
     ],
+  },
+];
+
+export const GuideText = [
+  {
+    title: '푸드트럭',
+    date: '- 10월 7일 : 10:00 ~ 23:00\n- 10월 8일 : 10:00 ~ 22:00',
+    location: '국제관 앞',
+  },
+  {
+    title: '취식존',
+    date: '- 10월 7일 : 10:00 ~ 23:00\n- 10월 8일 : 10:00 ~ 22:00',
+    location: '방목학술정보관과 행정동 사이',
+  },
+];
+
+export const FoodItemList = [
+  {
+    img: BeefBibimbapImg,
+    title: '메이트럭',
+    description: '소고기 불초밥',
+  },
+  {
+    img: ChickenGangjeongImg,
+    title: '블랙키친',
+    description: '닭강정',
+  },
+  {
+    img: SundaeGopchangImg,
+    title: '곱창 좋은 날',
+    description: '순대곱창',
+  },
+  {
+    img: ChurrosImg,
+    title: '부부츄러스',
+    description: '회오리감자\n츄러스, 아이스크림 츄러스',
+  },
+  {
+    img: ChickenSkewersImg,
+    title: '혜표',
+    description: '닭꼬치',
+  },
+  {
+    img: TakoyakiImg,
+    title: '타코스토리',
+    description: '타코야끼, 소떡소떡',
+  },
+  {
+    img: CrepeImg,
+    title: '보리마루',
+    description: '수제 크레페',
+  },
+  {
+    img: YakisobaImg,
+    title: '오야붕트럭',
+    description: '야끼소바',
+  },
+  {
+    img: SteakImg,
+    title: '스테이킹',
+    description: '스테이크',
+  },
+  {
+    img: CoffeeImg,
+    title: '하루다방',
+    description: '커피',
   },
 ];

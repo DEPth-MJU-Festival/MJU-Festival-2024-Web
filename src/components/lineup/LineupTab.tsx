@@ -2,7 +2,8 @@ import { LineupItem } from '@/constants/lineup';
 import * as S from '@styles/lineup/LineupTabStyle';
 import { forwardRef, useState } from 'react';
 import ChevronLeftBigIcon from '@icons/header/ChevronLeftBig.svg?react';
-import RenderIcon from '../timetable/RenderIcon';
+import RenderIcon from '../common/RenderIcon';
+import BorderIcon from '@icons/border/Border.svg?react';
 
 const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
   const [selectedId, setSelectedId] = useState(0);
@@ -54,10 +55,10 @@ const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
         </S.IconBtn>
       </S.ImgWrap>
       <S.NameWrap>
-        {RenderIcon('LeftTop', 0, 16)}
-        {RenderIcon('RightTop', 90, 16)}
-        {RenderIcon('RightBottom', 180, 16)}
-        {RenderIcon('LeftBottom', 270, 16)}
+        {RenderIcon('LeftTop', 0, 16, BorderIcon)}
+        {RenderIcon('RightTop', 90, 16, BorderIcon)}
+        {RenderIcon('RightBottom', 180, 16, BorderIcon)}
+        {RenderIcon('LeftBottom', 270, 16, BorderIcon)}
         <h3>DAY {LineupItem[selectedId].day}</h3>
         <hr />
         <h1>{LineupItem[selectedId].name}</h1>

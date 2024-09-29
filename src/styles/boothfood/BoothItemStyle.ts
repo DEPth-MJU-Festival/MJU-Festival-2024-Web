@@ -4,10 +4,6 @@ export const Container = styled.div`
   border-radius: 6px;
   background: var(--White);
   box-shadow: 0px 0px 8px 0px rgba(141, 166, 212, 0.3);
-
-  > img {
-    margin-top: -1px;
-  }
 `;
 
 export const TextWrap = styled.div`

@@ -1,16 +1,16 @@
-import * as S from '@styles/timetable/RenderIconStyle';
+import * as S from '@/styles/common/RenderIconStyle';
 import { TIconPosition } from '@/types/timetable';
-import BorderIcon from '@icons/border/Border.svg?react';
 
 const RenderIcon = (
   position: TIconPosition,
   rotation: number,
   padding: number,
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>,
 ) => {
   const PositionComponent = S[position as keyof typeof S];
   return (
     <PositionComponent $padding={padding}>
-      <BorderIcon style={{ transform: `rotate(${rotation}deg)` }} />
+      <Icon style={{ transform: `rotate(${rotation}deg)` }} />
     </PositionComponent>
   );
 };
