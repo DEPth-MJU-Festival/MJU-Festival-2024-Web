@@ -1,10 +1,10 @@
 import { LineupItem } from '@/constants/lineup';
 import * as S from '@styles/lineup/LineupTabStyle';
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 import ChevronLeftBigIcon from '@icons/header/ChevronLeftBig.svg?react';
 import RenderIcon from '../timetable/RenderIcon';
 
-const LineupTab = () => {
+const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
   const [selectedId, setSelectedId] = useState(0);
   const isPrevDisabled = selectedId === 0;
   const isNextDisabled = selectedId === LineupItem.length - 1;
@@ -18,7 +18,7 @@ const LineupTab = () => {
   };
 
   return (
-    <S.Container>
+    <S.Container ref={ref}>
       <S.ImgWrap>
         <img src={LineupItem[selectedId].img} width="100%" />
         <S.IconBtn
@@ -69,6 +69,6 @@ const LineupTab = () => {
       </S.CircleWrap>
     </S.Container>
   );
-};
+});
 
 export default LineupTab;

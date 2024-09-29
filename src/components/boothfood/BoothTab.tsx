@@ -1,12 +1,29 @@
 import * as S from '@styles/boothfood/BoothTabStyle';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ChevronLeftIcon from '@icons/header/ChevronLeft.svg?react';
 import { BoothItemList } from '@constants/boothfood';
 import BoothItem from './BoothItem';
 import NightBoothLongImg from '@images/boothfood/NightBooth/NightBoothLong.png';
 
-const BoothTab = () => {
+const BoothTab = ({ navigationHeight }: { navigationHeight: number }) => {
   const [selectedId, setSelectedId] = useState(0);
+  const headWrapRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    if (selectedId !== 0) {
+      const currentRef = headWrapRefs.current[selectedId - 1];
+      if (currentRef) {
+        const headerHeight = navigationHeight + 64;
+        const rect = currentRef.getBoundingClientRect();
+        const offsetTop = rect.top + window.scrollY - headerHeight;
+
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }, [navigationHeight, selectedId]);
 
   return (
     <S.Container>
@@ -14,6 +31,7 @@ const BoothTab = () => {
         return (
           <div key={index}>
             <S.HeadWrap
+              ref={el => (headWrapRefs.current[data.id - 1] = el)}
               $selected={selectedId === data.id}
               onClick={() => {
                 if (selectedId === data.id) {
@@ -39,7 +57,7 @@ const BoothTab = () => {
                 })}
               </S.BodyWrap>
             )}
-            {index === BoothItemList.length - 1 && // 마지막 인덱스일 때만 렌더링
+            {index === BoothItemList.length - 1 &&
               (selectedId !== data.id ? (
                 <div
                   style={{
