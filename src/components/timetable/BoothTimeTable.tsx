@@ -1,5 +1,5 @@
 import * as S from '@styles/timetable/BoothTimeTableStyle';
-import { BoothTimeTableText } from '@/constants/timetable';
+import { BoothTimeTableText } from '@constants/timetable';
 import RenderIcon from '../common/RenderIcon';
 import BorderIcon from '@icons/border/Border.svg?react';
 

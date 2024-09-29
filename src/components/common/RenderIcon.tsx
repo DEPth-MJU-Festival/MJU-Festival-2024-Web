@@ -1,4 +1,4 @@
-import * as S from '@/styles/common/RenderIconStyle';
+import * as S from '@styles/common/RenderIconStyle';
 import { TIconPosition } from '@/types/timetable';
 
 const RenderIcon = (

@@ -1,4 +1,4 @@
-import * as S from '@/styles/common/NoticeFieldStyle';
+import * as S from '@styles/common/NoticeFieldStyle';
 import GoogleMapsIcon from '@icons/header/GoogleMaps.svg?react';
 import BorderLongIcon from '@icons/border/BorderLong.svg?react';
 import BorderLongRightIcon from '@icons/border/BorderLongRight.svg?react';

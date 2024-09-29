@@ -220,7 +220,7 @@ export const BoothItemList = [
   },
 ];
 
-export const GuideText = [
+export const NoticeText = [
   {
     title: '푸드트럭',
     date: '- 10월 7일 : 10:00 ~ 23:00\n- 10월 8일 : 10:00 ~ 22:00',

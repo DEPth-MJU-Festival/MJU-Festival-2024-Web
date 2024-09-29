@@ -1,4 +1,4 @@
-import { NavigationBarItem } from '@/constants/main';
+import { NavigationBarItem } from '@constants/main';
 import * as S from '@styles/main/NavigationBar';
 import { forwardRef, useCallback, useEffect, useRef } from 'react';
 

@@ -1,20 +1,15 @@
-import { FoodItemList, GuideText } from '@/constants/boothfood';
-import * as S from '@styles/boothfood/FoodTabStyle';
+import { FoodItemList, NoticeText } from '@constants/boothfood';
 import NoticeField from '../common/NoticeField';
 import ListItem from '../common/ListItem';
 
 const FoodTab = () => {
   return (
-    <S.Container>
-      {GuideText.map((data, index) => {
+    <div style={{ marginTop: 30 }}>
+      {NoticeText.map((data, index) => {
         return <NoticeField key={index} data={data} />;
       })}
       {FoodItemList.map((data, index) => {
-        return (
-          <S.ItemWrap key={index}>
-            <ListItem data={data} />
-          </S.ItemWrap>
-        );
+        return <ListItem key={index} data={data} />;
       })}
       <div
         style={{
@@ -23,7 +18,7 @@ const FoodTab = () => {
           margin: '0 16px',
         }}
       ></div>
-    </S.Container>
+    </div>
   );
 };
 
