@@ -1,14 +1,15 @@
 import * as S from '@styles/timetable/BoothTimeTableStyle';
 import { BoothTimeTableText } from '@/constants/timetable';
-import RenderIcon from './RenderIcon';
+import RenderIcon from '../common/RenderIcon';
+import BorderIcon from '@icons/border/Border.svg?react';
 
 const BoothTimeTable = () => {
   return (
     <S.Container>
-      {RenderIcon('LeftTop', 0, 4)}
-      {RenderIcon('RightTop', 90, 4)}
-      {RenderIcon('RightBottom', 180, 4)}
-      {RenderIcon('LeftBottom', 270, 4)}
+      {RenderIcon('LeftTop', 0, 4, BorderIcon)}
+      {RenderIcon('RightTop', 90, 4, BorderIcon)}
+      {RenderIcon('RightBottom', 180, 4, BorderIcon)}
+      {RenderIcon('LeftBottom', 270, 4, BorderIcon)}
       <S.NoticeTitle>팔찌 부스 운영 시간</S.NoticeTitle>
       <S.NoticeTime style={{ marginBottom: '15px' }}>
         : 10:00 ~ 19:00

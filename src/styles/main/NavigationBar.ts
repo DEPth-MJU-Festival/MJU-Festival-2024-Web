@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   position: sticky;
-  top: 60px;
+  top: 64px;
   z-index: 100;
 
   background-color: var(--WhiteSmoke);
