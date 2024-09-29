@@ -1,4 +1,4 @@
-import { LineupItem } from '@/constants/lineup';
+import { LineupItem } from '@constants/lineup';
 import * as S from '@styles/lineup/LineupTabStyle';
 import { forwardRef, useState } from 'react';
 import ChevronLeftBigIcon from '@icons/header/ChevronLeftBig.svg?react';

@@ -1,4 +1,4 @@
-import * as S from '@/styles/common/ListItemStyle';
+import * as S from '@styles/common/ListItemStyle';
 
 const ListItem = ({
   data,

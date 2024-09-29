@@ -6,6 +6,7 @@ import MainTab from '@components/main/MainTab';
 import TimeTableTab from '@components/timetable/TimeTableTab';
 import LineupTab from '@components/lineup/LineupTab';
 import BoothFoodTab from '@components/boothfood/BoothFoodTab';
+import FleaMarketTab from '@components/fleamarket/FleaMarketTab';
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(0);
@@ -55,6 +56,8 @@ const MainPage = () => {
             navigationHeight={navigationHeight}
           />
         );
+      case 4:
+        return <FleaMarketTab ref={el => (tabRefs.current[4] = el)} />;
       default:
         return <MainTab ref={el => (tabRefs.current[0] = el)} />;
     }

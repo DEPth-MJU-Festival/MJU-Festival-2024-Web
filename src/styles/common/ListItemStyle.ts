@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 15px 0 16px;
+  margin: 0 16px;
+  padding: 25.5px 0;
   display: flex;
   position: relative;
   gap: 14px;
-  margin-left: -8px;
+  border-top: 1.5px solid var(--PastelBlue);
 
   > img {
-    width: 116px;
+    width: 100px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px 0px rgba(141, 166, 212, 0.3);
   }
 `;
 
 export const RightWrap = styled.div`
-  padding: 8px 0;
-
   > h1 {
     font: var(--HeaderG);
     color: var(--BlueBlack);
