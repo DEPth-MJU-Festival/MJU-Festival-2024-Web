@@ -1,11 +1,11 @@
-import Img1 from '@images/lineup/1.svg';
-import Img2 from '@images/lineup/2.svg';
-import Img3 from '@images/lineup/3.svg';
-import Img4 from '@images/lineup/4.svg';
-import Img5 from '@images/lineup/5.svg';
-import Img6 from '@images/lineup/6.svg';
-import Img7 from '@images/lineup/7.svg';
-import Img8 from '@images/lineup/8.svg';
+import Img1 from '@images/lineup/1.png';
+import Img2 from '@images/lineup/2.png';
+import Img3 from '@images/lineup/3.png';
+import Img4 from '@images/lineup/4.png';
+import Img5 from '@images/lineup/5.png';
+import Img6 from '@images/lineup/6.png';
+import Img7 from '@images/lineup/7.png';
+import Img8 from '@images/lineup/8.png';
 
 export const LineupItem = [
   {
