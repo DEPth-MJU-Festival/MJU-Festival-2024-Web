@@ -18,14 +18,26 @@ export const TextWrap = styled.div`
     font: var(--HeaderG);
     color: var(--BlueBlack);
   }
+`;
+
+export const TextItemWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   > p {
-    margin: 15px 0;
-    padding-top: 15px;
+    margin-top: 15px;
+    padding-top: 13px;
     border-top: 1px solid var(--DeepBlue);
 
-    font: var(--BodyText);
+    font: var(--BodyText2);
     color: var(--BlueBlack);
+    white-space: pre-line;
+  }
+
+  > h5 {
+    font: var(--BodyText2);
+    color: var(--DeepBlue);
     white-space: pre-line;
   }
 `;
@@ -34,6 +46,7 @@ export const LocationWrap = styled.div`
   display: flex;
   align-items: center;
   gap: 4px;
+  margin-top: 2px;
 
   > p {
     font: var(--Caption);
