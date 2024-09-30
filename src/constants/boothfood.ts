@@ -1,3 +1,4 @@
+import SurvivalImg from '@images/boothfood/StudentCouncilBooth/Survival.png';
 import BraceletBoothImg from '@images/boothfood/StudentCouncilBooth/BraceletBooth.png';
 import GoodsBoothImg from '@images/boothfood/StudentCouncilBooth/GoodsBooth.png';
 import PartnershipBoothImg from '@images/boothfood/StudentCouncilBooth/PartnershipBooth.png';
@@ -40,23 +41,74 @@ export const BoothItemList = [
     item: [
       {
         img: BraceletBoothImg,
-        host: '총학생회',
-        title: '팔찌 배부 부스',
+        item: [
+          {
+            host: '총학생회',
+            title: '팔찌 배부 부스',
+            description: '부스 내용 : 팔찌 및 리플렛 배부',
+            time: '운영 시간 : 10:00 ~ 19:00',
+            location: '학생회관 앞',
+          },
+        ],
       },
       {
         img: GoodsBoothImg,
-        host: '총학생회',
-        title: '이벤트 부스 / 굿즈 판매 부스',
+        item: [
+          {
+            host: '총학생회',
+            title: '이벤트 부스',
+            description:
+              '낭만 우체국 : 10:00 ~ 선착순 150명 종료 시까지\n낭만 모음.zip : 10:00 ~ 18:00',
+            location: '종합관 앞',
+            etc: '*자세한 내용은 이벤트 페이지에서 확인 부탁드립니다.',
+          },
+          {
+            host: '총학생회',
+            title: '굿즈 판매 부스',
+            description:
+              '부스 내용 : 사전 구매 레플리카 배부 및 축제 굿즈 판매',
+            time: '운영 시간 : 10:00 ~ 15:00',
+            location: '종합관 앞',
+            etc: '*자세한 내용은 이벤트 페이지에서 확인 부탁드립니다.',
+          },
+        ],
       },
       {
         img: PartnershipBoothImg,
-        host: '총학생회',
-        title: '이벤트 · 제휴 부스',
+        item: [
+          {
+            host: '총학생회',
+            title: '이벤트 · 제휴 부스',
+            description: '부스 내용 : 축제 협찬품 증정',
+            time: '청춘 출력소 : 10:00 ~ 18:00\n드레스 코드 이벤트 : 12:00 ~ 선착순 50명 종료 시까지\n낭만 찾아 삼만리 : 10:00 ~ 선착순 40명 종료 시까지\n제휴 부스 : 10:00 ~ 재고 소진 시 마감\n제휴 부스 : 10:00 ~ 재고 소진 시 마감',
+            location: '구령대',
+            etc: '*자세한 내용은 이벤트 페이지에서 확인 부탁드립니다.',
+          },
+        ],
+      },
+      {
+        img: SurvivalImg,
+        item: [
+          {
+            host: '총학생회',
+            title: '서바이벌 존',
+            description: '부스 내용 : 레이저태그 서바이벌 게임 진행',
+            time: '운영 시간 : 11:00 ~ 16:00',
+            location: '농구장',
+          },
+        ],
       },
       {
         img: EmergencyBoothImg,
-        host: '총학생회',
-        title: '응급 부스',
+        item: [
+          {
+            host: '총학생회',
+            title: '응급 부스',
+            description: '부스 내용 : 의료 지원 및 분실물 관리',
+            time: '운영 시간 : 10:00 ~ 22:00',
+            location: '축구장 출입구 부근',
+          },
+        ],
       },
     ],
   },
@@ -66,24 +118,36 @@ export const BoothItemList = [
     item: [
       {
         img: LawCollegeImg,
-        host: '법과대학',
-        title: '나 주먹왕 랄프인데, 이거 재밌다',
-        description: '야시장 / 펀치 게임 / 호떡 및 소세지 판매',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '법과대학',
+            title: '나 주먹왕 랄프인데, 이거 재밌다',
+            description: '야시장 / 펀치 게임 / 호떡 및 소세지 판매',
+            location: '종합관 앞',
+          },
+        ],
       },
       {
         img: ICTConvergenceImg,
-        host: 'ICT융합대학',
-        title: '요즘 아이시티의 정석',
-        description: '카페 (요아정, 아망추) / 오락',
-        location: '종합관 앞',
+        item: [
+          {
+            host: 'ICT융합대학',
+            title: '요즘 아이시티의 정석',
+            description: '카페 (요아정, 아망추) / 오락',
+            location: '종합관 앞',
+          },
+        ],
       },
       {
         img: StudentUnionImg,
-        host: '총동아리연합회',
-        title: 'Temu:th',
-        description: '짝',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '총동아리연합회',
+            title: 'Temu:th',
+            description: '짝',
+            location: '종합관 앞',
+          },
+        ],
       },
     ],
   },
@@ -93,45 +157,69 @@ export const BoothItemList = [
     item: [
       {
         img: BusinessDepartmentImg,
-        host: '경영학과',
-        title: '포켓몬 센터',
-        description: '뽑기 / 돈까스 판매',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '경영학과',
+            title: '포켓몬 센터',
+            description: '뽑기 / 돈까스 판매',
+            location: '종합관 앞',
+          },
+        ],
       },
       {
         img: LibraryInfoDepartmentImg,
-        host: '문헌정보학과',
-        title: '북(BOOK)적북적',
-        description: '오락실 + 소개팅',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '문헌정보학과',
+            title: '북(BOOK)적북적',
+            description: '오락실 + 소개팅',
+            location: '종합관 앞',
+          },
+        ],
       },
       {
         img: EnglishLitDepartmentImg,
-        host: '영어영문학과',
-        title: '9와 4분의 3 승강장에서 영문과가 널 기다려',
-        description: '해리포터 컨셉 카페(핫도그+과일에이드)',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '영어영문학과',
+            title: '9와 4분의 3 승강장에서 영문과가 널 기다려',
+            description: '해리포터 컨셉 카페(핫도그+과일에이드)',
+            location: '종합관 앞',
+          },
+        ],
       },
       {
         img: SoftwareConvergenceImg,
-        host: '융합소프트웨어학부',
-        title: '사랑의 알고리즘',
-        description: '성향 테스트 + 궁합 찾기',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '융합소프트웨어학부',
+            title: '사랑의 알고리즘',
+            description: '성향 테스트 + 궁합 찾기',
+            location: '종합관 앞',
+          },
+        ],
       },
       {
         img: YouthGuidanceDepartmentImg,
-        host: '청소년지도학과',
-        title: '깜깜 시그널(블라인드 단체 미팅)',
-        description: '블라인드 미팅 + 뽑기',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '청소년지도학과',
+            title: '깜깜 시그널(블라인드 단체 미팅)',
+            description: '블라인드 미팅 + 뽑기',
+            location: '종합관 앞',
+          },
+        ],
       },
       {
         img: PublicAdminDepartmentImg,
-        host: '행정학과',
-        title: '우㉣ㅣ행촌ㅎトスト(´ε｀)♡',
-        description: '싸이월드(소개팅+노래 맞추기)',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '행정학과',
+            title: '우㉣ㅣ행촌ㅎトスト(´ε｀)♡',
+            description: '싸이월드(소개팅+노래 맞추기)',
+            location: '종합관 앞',
+          },
+        ],
       },
     ],
   },
@@ -141,67 +229,103 @@ export const BoothItemList = [
     item: [
       {
         img: RCYImg,
-        host: 'RCY',
-        title: 'TOY STORY : 앤디가 잠든 사이',
-        description: '팬케이크 + 총 게임',
-        location: 'MCC관 앞',
+        item: [
+          {
+            host: 'RCY',
+            title: 'TOY STORY : 앤디가 잠든 사이',
+            description: '팬케이크 + 총 게임',
+            location: 'MCC관 앞',
+          },
+        ],
       },
       {
         img: MyeongjiServiceImg,
-        host: '명지사랑봉사단 X 그린캠퍼스 지킴이',
-        title: '사회봉사단과 지구 사랑할래?',
-        description: '분리배출 게임',
-        location: 'MCC관 앞',
+        item: [
+          {
+            host: '명지사랑봉사단 X 그린캠퍼스 지킴이',
+            title: '사회봉사단과 지구 사랑할래?',
+            description: '분리배출 게임',
+            location: 'MCC관 앞',
+          },
+        ],
       },
       {
         img: SaebitHongboImg,
-        host: '새빛모리&홍보기자단',
-        title: '홍보기자단X새빛모리',
-        description:
-          '새빛모리: 오락실(게임+풍선 제공)\n홍기단: 사진관(폴라로이드+엽서)',
-        location: 'MCC관 앞',
+        item: [
+          {
+            host: '새빛모리&홍보기자단',
+            title: '홍보기자단X새빛모리',
+            description:
+              '새빛모리: 오락실(게임+풍선 제공)\n홍기단: 사진관(폴라로이드+엽서)',
+            location: 'MCC관 앞',
+          },
+        ],
       },
       {
         img: DisabilitySupportersImg,
-        host: '장애학생 서포터즈 “아띠”',
-        title: '우리랑 배(리어)프(리)할래?',
-        description: '인식 개선',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '장애학생 서포터즈 “아띠”',
+            title: '우리랑 배(리어)프(리)할래?',
+            description: '인식 개선',
+            location: '종합관 앞',
+          },
+        ],
       },
       {
         img: AouramiImg,
-        host: '어우라미',
-        title: '어우라미 헤나 부스',
-        description: '헤나+상품 뽑기',
-        location: '',
+        item: [
+          {
+            host: '어우라미',
+            title: '어우라미 헤나 부스',
+            description: '헤나+상품 뽑기',
+            location: '',
+          },
+        ],
       },
       {
         img: StartupClubImg,
-        host: '창업동아리',
-        title: '네잎클로버',
-        description: '네잎클로버 그립톡 만들기+행운의 상대',
-        location: 'MCC관 앞',
+        item: [
+          {
+            host: '창업동아리',
+            title: '네잎클로버',
+            description: '네잎클로버 그립톡 만들기+행운의 상대',
+            location: 'MCC관 앞',
+          },
+        ],
       },
       {
         img: MyeongjiMilitaryImg,
-        host: '명지대 학군단',
-        title: 'ROTC는 스펙이다',
-        description: '사격+체력경연대회+다과 제공',
-        location: 'MCC관 앞',
+        item: [
+          {
+            host: '명지대 학군단',
+            title: 'ROTC는 스펙이다',
+            description: '사격+체력경연대회+다과 제공',
+            location: 'MCC관 앞',
+          },
+        ],
       },
       {
         img: MyeongjiTomorrowImg,
-        host: '명지내일',
-        title: '취명타 : 취업 문제 명중 타격',
-        description: '플라잉디스크',
-        location: '종합관 앞',
+        item: [
+          {
+            host: '명지내일',
+            title: '취명타 : 취업 문제 명중 타격',
+            description: '플라잉디스크',
+            location: '종합관 앞',
+          },
+        ],
       },
       {
         img: DonghwaDahmImg,
-        host: '동화담 X 다함',
-        title: '졸업했지만 학교는 가고싶어.',
-        description: '휘낭시에 및 쿠키 판매',
-        location: 'MCC관 앞',
+        item: [
+          {
+            host: '동화담 X 다함',
+            title: '졸업했지만 학교는 가고싶어.',
+            description: '휘낭시에 및 쿠키 판매',
+            location: 'MCC관 앞',
+          },
+        ],
       },
     ],
   },
@@ -211,10 +335,14 @@ export const BoothItemList = [
     item: [
       {
         img: NightBoothImg,
-        host: '경영대학 X 사회과학대학 X 인문대학',
-        title: 'NEON Bloom',
-        description: '연합 주점',
-        location: '미래융합관 앞',
+        item: [
+          {
+            host: '경영대학 X 사회과학대학 X 인문대학',
+            title: 'NEON Bloom',
+            description: '연합 주점',
+            location: '미래융합관 앞',
+          },
+        ],
       },
     ],
   },

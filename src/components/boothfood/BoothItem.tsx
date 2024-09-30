@@ -1,36 +1,39 @@
 import * as S from '@styles/boothfood/BoothItemStyle';
 import GoogleMapsIcon from '@icons/header/GoogleMaps.svg?react';
 
-interface BaseData {
+type Props = {
   img: string;
-  host: string;
-  title: string;
-}
+  item: {
+    host: string;
+    title: string;
+    description: string;
+    location: string;
+    time?: string;
+    etc?: string;
+  }[];
+};
 
-interface DetailedData extends BaseData {
-  description: string;
-  location: string;
-}
-
-type BoothData = BaseData | DetailedData;
-
-const BoothItem = ({ data }: { data: BoothData }) => {
+const BoothItem = ({ data }: { data: Props }) => {
   return (
     <S.Container>
       <img src={data.img} width="100%" />
-      <S.TextWrap>
-        <h4>{data.host}</h4>
-        <h3>{data.title}</h3>
-        {'description' in data && 'location' in data && (
-          <>
-            <p>{data.description}</p>
-            <S.LocationWrap>
-              <GoogleMapsIcon color="var(--DeepBlue)" />
-              <p>{data.location}</p>
-            </S.LocationWrap>
-          </>
-        )}
-      </S.TextWrap>
+      {data.item.map((data, index) => {
+        return (
+          <S.TextWrap key={index}>
+            <h4>{data.host}</h4>
+            <h3>{data.title}</h3>
+            <S.TextItemWrap>
+              <p>{data.description}</p>
+              {'time' in data && <h5>{data.time}</h5>}
+              <S.LocationWrap>
+                <GoogleMapsIcon color="var(--DeepBlue)" />
+                <p>{data.location}</p>
+              </S.LocationWrap>
+              {'etc' in data && <h5>{data.etc}</h5>}
+            </S.TextItemWrap>
+          </S.TextWrap>
+        );
+      })}
     </S.Container>
   );
 };
