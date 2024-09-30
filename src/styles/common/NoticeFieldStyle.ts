@@ -23,6 +23,18 @@ export const Container = styled.div`
     margin-bottom: 10px;
   }
 
+  > h4 {
+    font: var(--NoticeTime);
+    color: var(--BlueBlack);
+    margin-top: 15px;
+  }
+
+  > h5 {
+    font: var(--NoticeSubtitle);
+    color: var(--PaleYellow);
+    margin-top: 15px;
+  }
+
   > p {
     font: var(--NoticeTime);
     color: var(--White);

@@ -7,6 +7,7 @@ import TimeTableTab from '@components/timetable/TimeTableTab';
 import LineupTab from '@components/lineup/LineupTab';
 import BoothFoodTab from '@components/boothfood/BoothFoodTab';
 import FleaMarketTab from '@components/fleamarket/FleaMarketTab';
+import AffiliateBarTab from '@components/affiliatebar/AffiliateBarTab';
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(0);
@@ -20,6 +21,7 @@ const MainPage = () => {
     }
   }, [selectedBar]);
 
+  //자동 스크롤
   const scrollToTab = useCallback(
     (index: number) => {
       const tab = tabRefs.current[index];
@@ -58,6 +60,8 @@ const MainPage = () => {
         );
       case 4:
         return <FleaMarketTab ref={el => (tabRefs.current[4] = el)} />;
+      case 6:
+        return <AffiliateBarTab ref={el => (tabRefs.current[6] = el)} />;
       default:
         return <MainTab ref={el => (tabRefs.current[0] = el)} />;
     }

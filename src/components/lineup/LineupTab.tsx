@@ -1,59 +1,39 @@
 import { LineupItem } from '@constants/lineup';
 import * as S from '@styles/lineup/LineupTabStyle';
 import { forwardRef, useState } from 'react';
-import ChevronLeftBigIcon from '@icons/header/ChevronLeftBig.svg?react';
 import RenderIcon from '../common/RenderIcon';
 import BorderIcon from '@icons/border/Border.svg?react';
+import ImgSwitcher from '../common/ImgSwitcher';
 
 const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
   const [selectedId, setSelectedId] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
   const isPrevDisabled = selectedId === 0;
   const isNextDisabled = selectedId === LineupItem.length - 1;
-
-  const handleNext = () => {
-    setSelectedId(prev => Math.min(prev + 1, LineupItem.length - 1));
-  };
 
   const handlePrev = () => {
     setSelectedId(prev => Math.max(prev - 1, 0));
   };
 
+  const handleNext = () => {
+    setSelectedId(prev => Math.min(prev + 1, LineupItem.length - 1));
+  };
+
   return (
-    <S.Container ref={ref}>
-      <S.ImgWrap>
-        <img src={LineupItem[selectedId].img} width="100%" />
-        <S.IconBtn
-          onClick={handlePrev}
-          disabled={isPrevDisabled}
-          style={{
-            left: 0,
-            marginLeft: '-27.5px',
-          }}
-        >
-          <ChevronLeftBigIcon
-            width={36}
-            height={36}
-            color={isPrevDisabled ? '#D9E0F0' : '#1A2530'}
-            style={{
-              transform: 'rotate(180deg)',
-            }}
-          />
-        </S.IconBtn>
-        <S.IconBtn
-          onClick={handleNext}
-          disabled={isNextDisabled}
-          style={{
-            right: 0,
-            marginRight: '-27.5px',
-          }}
-        >
-          <ChevronLeftBigIcon
-            width={36}
-            height={36}
-            color={isNextDisabled ? '#D9E0F0' : '#1A2530'}
-          />
-        </S.IconBtn>
-      </S.ImgWrap>
+    <div
+      ref={ref}
+      style={{
+        height: isLoading ? 1500 : 'auto',
+      }}
+    >
+      <ImgSwitcher
+        img={LineupItem[selectedId].img}
+        handlePrev={handlePrev}
+        isPrevDisabled={isPrevDisabled}
+        handleNext={handleNext}
+        isNextDisabled={isNextDisabled}
+        setIsLoading={setIsLoading}
+      />
       <S.NameWrap>
         {RenderIcon('LeftTop', 0, 16, BorderIcon)}
         {RenderIcon('RightTop', 90, 16, BorderIcon)}
@@ -68,7 +48,7 @@ const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
           <S.Circle key={index} $selected={selectedId === index} />
         ))}
       </S.CircleWrap>
-    </S.Container>
+    </div>
   );
 });
 
