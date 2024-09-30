@@ -60,8 +60,6 @@ const MainPage = () => {
         );
       case 4:
         return <FleaMarketTab ref={el => (tabRefs.current[4] = el)} />;
-      case 5:
-        return <FleaMarketTab ref={el => (tabRefs.current[5] = el)} />;
       case 6:
         return <AffiliateBarTab ref={el => (tabRefs.current[6] = el)} />;
       default:
