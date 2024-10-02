@@ -82,10 +82,23 @@ const MainPage = () => {
     scrollToTab(selectedBar);
   }, [scrollToTab, selectedBar]);
 
+  const handleBarClick = (id: number) => {
+    if (selectedBar === id) {
+      scrollToTab(id);
+    } else {
+      setSelectedBar(id);
+    }
+  };
+
   const renderTab = () => {
     switch (selectedBar) {
       case 0:
-        return <MainTab ref={el => (tabRefs.current[0] = el)} preloadImage={PosterImg} />;
+        return (
+          <MainTab
+            ref={el => (tabRefs.current[0] = el)}
+            preloadImage={PosterImg}
+          />
+        );
       case 1:
         return (
           <TimeTableTab
@@ -161,7 +174,7 @@ const MainPage = () => {
       <NavigationBar
         ref={navigationBarRef}
         selectedBar={selectedBar}
-        setSelectedBar={setSelectedBar}
+        setSelectedBar={handleBarClick}
       />
       {renderTab()}
     </div>
