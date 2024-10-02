@@ -13,7 +13,7 @@ import AffiliatedItemsTab from '@/components/affiliateditems/AffiliatedItemsTab'
 import GoodsTab from '@/components/goods/GoodsTab';
 
 const MainPage = () => {
-  const [selectedBar, setSelectedBar] = useState(0);
+  const [selectedBar, setSelectedBar] = useState(-1);
   const [navigationHeight, setNavigationHeight] = useState(0);
   const navigationBarRef = useRef<HTMLDivElement | null>(null);
   const tabRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -24,7 +24,7 @@ const MainPage = () => {
     }
   }, [selectedBar]);
 
-  //자동 스크롤
+  // 자동 스크롤
   const scrollToTab = useCallback(
     (index: number) => {
       const tab = tabRefs.current[index];
