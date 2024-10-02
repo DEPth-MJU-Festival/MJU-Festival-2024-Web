@@ -11,12 +11,22 @@ import AffiliateBarTab from '@components/affiliatebar/AffiliateBarTab';
 import EventTab from '@/components/event/EventTab';
 import AffiliatedItemsTab from '@/components/affiliateditems/AffiliatedItemsTab';
 import GoodsTab from '@/components/goods/GoodsTab';
+import { LineupItem } from '@/constants/lineup';
+
+const preloadImages = [LineupItem[0].img];
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(-1);
   const [navigationHeight, setNavigationHeight] = useState(0);
   const navigationBarRef = useRef<HTMLDivElement | null>(null);
   const tabRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    preloadImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   useEffect(() => {
     if (navigationBarRef.current) {
