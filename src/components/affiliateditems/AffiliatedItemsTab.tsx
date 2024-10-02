@@ -5,7 +5,10 @@ import BrandBoothTab from './BrandBoothTab';
 import NoticeTextField from '../common/NoticeTextField';
 import MapImg from '@images/affiliateditems/Map.png';
 
-const AffiliatedItemsTab = forwardRef<HTMLDivElement>((_, ref) => {
+const AffiliatedItemsTab = forwardRef<
+  HTMLDivElement,
+  { preloadImages: string[] }
+>(({ preloadImages }, ref) => {
   const [selectedId, setSelectedId] = useState(0);
 
   useEffect(() => {
@@ -33,7 +36,10 @@ const AffiliatedItemsTab = forwardRef<HTMLDivElement>((_, ref) => {
             />
           </div>
         }
-        tabContents={[<AffiliatedItemTab />, <BrandBoothTab />]}
+        tabContents={[
+          <AffiliatedItemTab preloadImages={preloadImages} />,
+          <BrandBoothTab />,
+        ]}
       />
     </div>
   );

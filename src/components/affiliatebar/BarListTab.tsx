@@ -6,9 +6,11 @@ import React from 'react';
 const BarListTab = ({
   setSelectedId,
   setIsDetail,
+  preloadImages,
 }: {
   setSelectedId: React.Dispatch<React.SetStateAction<number>>;
   setIsDetail: React.Dispatch<React.SetStateAction<boolean>>;
+  preloadImages: string[];
 }) => {
   return (
     <>
@@ -22,6 +24,7 @@ const BarListTab = ({
               setSelectedId(data.id);
               setIsDetail(true);
             }}
+            preloadImage={preloadImages[index]}
           />
         );
       })}

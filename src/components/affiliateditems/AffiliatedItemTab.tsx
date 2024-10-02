@@ -6,7 +6,7 @@ import ChevronLeftIcon from '@icons/header/ChevronLeft.svg?react';
 import GoogleMapsIcon from '@icons/header/GoogleMaps.svg?react';
 import { useState } from 'react';
 
-const AffiliatedItemTab = () => {
+const AffiliatedItemTab = ({ preloadImages }: { preloadImages: string[] }) => {
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
 
   const handleSelect = (id: number) => {
@@ -26,7 +26,14 @@ const AffiliatedItemTab = () => {
             <p>{data.description}</p>
             <S.ItemWrap>
               {data.item.map((item, index) => {
-                return <ListItem key={index} data={item} isDeep={true} />;
+                return (
+                  <ListItem
+                    key={index}
+                    data={item}
+                    isDeep={true}
+                    preloadImage={preloadImages[index]}
+                  />
+                );
               })}
               <S.DropdownWrap>
                 <S.ButtonWrap
