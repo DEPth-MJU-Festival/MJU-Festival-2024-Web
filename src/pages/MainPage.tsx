@@ -10,6 +10,7 @@ import FleaMarketTab from '@components/fleamarket/FleaMarketTab';
 import AffiliateBarTab from '@components/affiliatebar/AffiliateBarTab';
 import EventTab from '@/components/event/EventTab';
 import AffiliatedItemsTab from '@/components/affiliateditems/AffiliatedItemsTab';
+import GoodsTab from '@/components/goods/GoodsTab';
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(0);
@@ -68,6 +69,8 @@ const MainPage = () => {
         return <AffiliateBarTab ref={el => (tabRefs.current[6] = el)} />;
       case 7:
         return <AffiliatedItemsTab ref={el => (tabRefs.current[7] = el)} />;
+      case 8:
+        return <GoodsTab ref={el => (tabRefs.current[8] = el)} />;
       default:
         return <MainTab ref={el => (tabRefs.current[0] = el)} />;
     }
