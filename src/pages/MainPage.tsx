@@ -12,9 +12,8 @@ import EventTab from '@/components/event/EventTab';
 import AffiliatedItemsTab from '@/components/affiliateditems/AffiliatedItemsTab';
 import GoodsTab from '@/components/goods/GoodsTab';
 import { LineupItem } from '@/constants/lineup';
-import { EventList } from '@/constants/event';
 
-const preloadImages = [LineupItem[0].img, EventList[0].img];
+const preloadImages = [...LineupItem.map(item => item.img)];
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(-1);
@@ -64,7 +63,12 @@ const MainPage = () => {
       case 1:
         return <TimeTableTab ref={el => (tabRefs.current[1] = el)} />;
       case 2:
-        return <LineupTab ref={el => (tabRefs.current[2] = el)} />;
+        return (
+          <LineupTab
+            ref={el => (tabRefs.current[2] = el)}
+            preloadImages={preloadImages}
+          />
+        );
       case 3:
         return (
           <BoothFoodTab
