@@ -12,8 +12,10 @@ import EventTab from '@/components/event/EventTab';
 import AffiliatedItemsTab from '@/components/affiliateditems/AffiliatedItemsTab';
 import GoodsTab from '@/components/goods/GoodsTab';
 import { LineupItem } from '@/constants/lineup';
+import { EventList } from '@/constants/event';
 
-const preloadImages = [...LineupItem.map(item => item.img)];
+const preloadLineupImages = LineupItem.map(item => item.img);
+const preloadEventImages = EventList.map(item => item.img);
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(-1);
@@ -22,6 +24,7 @@ const MainPage = () => {
   const tabRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
+    const preloadImages = [...preloadLineupImages, ...preloadEventImages];
     preloadImages.forEach(src => {
       const img = new Image();
       img.src = src;
@@ -66,7 +69,7 @@ const MainPage = () => {
         return (
           <LineupTab
             ref={el => (tabRefs.current[2] = el)}
-            preloadImages={preloadImages}
+            preloadImages={preloadLineupImages}
           />
         );
       case 3:
@@ -79,7 +82,12 @@ const MainPage = () => {
       case 4:
         return <FleaMarketTab ref={el => (tabRefs.current[4] = el)} />;
       case 5:
-        return <EventTab ref={el => (tabRefs.current[5] = el)} />;
+        return (
+          <EventTab
+            ref={el => (tabRefs.current[5] = el)}
+            preloadImages={preloadEventImages}
+          />
+        );
       case 6:
         return <AffiliateBarTab ref={el => (tabRefs.current[6] = el)} />;
       case 7:
