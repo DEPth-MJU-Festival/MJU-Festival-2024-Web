@@ -1,9 +1,8 @@
 import { LineupItem } from '@constants/lineup';
 import * as S from '@styles/lineup/LineupTabStyle';
 import { forwardRef, useState } from 'react';
-import RenderIcon from '../common/RenderIcon';
-import BorderIcon from '@icons/border/Border.svg?react';
 import ImgSwitcher from '../common/ImgSwitcher';
+import NoticeTitleField from '../common/NoticeTitleField';
 
 const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
   const [selectedId, setSelectedId] = useState(0);
@@ -34,15 +33,7 @@ const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
         isNextDisabled={isNextDisabled}
         setIsLoading={setIsLoading}
       />
-      <S.NameWrap>
-        {RenderIcon('LeftTop', 0, 16, BorderIcon)}
-        {RenderIcon('RightTop', 90, 16, BorderIcon)}
-        {RenderIcon('RightBottom', 180, 16, BorderIcon)}
-        {RenderIcon('LeftBottom', 270, 16, BorderIcon)}
-        <h3>DAY {LineupItem[selectedId].day}</h3>
-        <hr />
-        <h1>{LineupItem[selectedId].name}</h1>
-      </S.NameWrap>
+      <NoticeTitleField data={LineupItem[selectedId]} />
       <S.CircleWrap>
         {LineupItem.map((_, index) => (
           <S.Circle key={index} $selected={selectedId === index} />
