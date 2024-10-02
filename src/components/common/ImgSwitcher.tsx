@@ -1,6 +1,5 @@
 import * as S from '@styles/common/ImgSwitcherStyle';
 import ChevronLeftBigIcon from '@icons/header/ChevronLeftBig.svg?react';
-import React from 'react';
 
 const ImgSwitcher = ({
   img,
@@ -8,23 +7,16 @@ const ImgSwitcher = ({
   isPrevDisabled,
   handleNext,
   isNextDisabled,
-  setIsLoading,
 }: {
   img: string;
   handlePrev: () => void;
   isPrevDisabled: boolean;
   handleNext: () => void;
   isNextDisabled: boolean;
-  setIsLoading?: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   return (
     <S.ImgWrap>
-      <img
-        src={img}
-        width="100%"
-        onLoad={() => setIsLoading && setIsLoading(false)}
-        loading="eager"
-      />
+      <img src={img} width="100%" />
       <S.IconBtn
         onClick={handlePrev}
         disabled={isPrevDisabled}

@@ -6,7 +6,6 @@ import NoticeTitleField from '../common/NoticeTitleField';
 
 const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
   const [selectedId, setSelectedId] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
   const isPrevDisabled = selectedId === 0;
   const isNextDisabled = selectedId === LineupItem.length - 1;
 
@@ -26,19 +25,13 @@ const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
   };
 
   return (
-    <div
-      ref={ref}
-      style={{
-        height: isLoading ? 1500 : 'auto',
-      }}
-    >
+    <div ref={ref}>
       <ImgSwitcher
         img={LineupItem[selectedId].img}
         handlePrev={handlePrev}
         isPrevDisabled={isPrevDisabled}
         handleNext={handleNext}
         isNextDisabled={isNextDisabled}
-        setIsLoading={setIsLoading}
       />
       <NoticeTitleField data={LineupItem[selectedId]} />
       <S.CircleWrap>
