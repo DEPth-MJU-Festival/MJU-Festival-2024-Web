@@ -23,6 +23,7 @@ const ImgSwitcher = ({
         src={img}
         width="100%"
         onLoad={() => setIsLoading && setIsLoading(false)}
+        loading="eager"
       />
       <S.IconBtn
         onClick={handlePrev}
