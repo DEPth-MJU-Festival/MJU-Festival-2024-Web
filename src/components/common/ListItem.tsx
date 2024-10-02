@@ -3,27 +3,35 @@ import * as S from '@styles/common/ListItemStyle';
 const ListItem = ({
   data,
   onClick,
+  isDeep = false,
 }: {
   data: {
     img: string;
     title: string;
-    description: string;
+    description?: string;
   };
   onClick?: () => void;
+  isDeep?: boolean;
 }) => {
   return (
-    <S.Container onClick={onClick} style={{ cursor: onClick && 'pointer' }}>
+    <S.Container
+      onClick={onClick}
+      style={{ cursor: onClick && 'pointer' }}
+      $isDeep={isDeep}
+    >
       <img src={data.img} width="100%" height="100%" />
       <S.RightWrap>
         <h1>{data.title}</h1>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: data.description.replace(
-              / {4,}/g,
-              '&nbsp;&nbsp;&nbsp;&nbsp;',
-            ),
-          }}
-        />
+        {data.description && (
+          <p
+            dangerouslySetInnerHTML={{
+              __html: data.description.replace(
+                / {4,}/g,
+                '&nbsp;&nbsp;&nbsp;&nbsp;',
+              ),
+            }}
+          />
+        )}
       </S.RightWrap>
     </S.Container>
   );

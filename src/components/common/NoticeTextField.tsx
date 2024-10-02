@@ -19,7 +19,7 @@ const NoticeTextField = ({
       {RenderIcon('LeftBottom', 270, 16, BorderIcon)}
       <h1>{data.title}</h1>
       <h4>{data.description}</h4>
-      <h5>{data.date}</h5>
+      {data.date && <h5>{data.date}</h5>}
     </S.Container>
   );
 };
