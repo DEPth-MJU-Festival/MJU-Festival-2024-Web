@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.div<{ $isDeep: boolean }>`
   margin: 0 16px;
   padding: 25.5px 0;
   display: flex;
   position: relative;
   gap: 14px;
-  border-top: 1.5px solid var(--PastelBlue);
+  border-top: ${props =>
+    props.$isDeep
+      ? '1.5px solid var(--DeepBlue)'
+      : '1.5px solid  var(--PastelBlue)'};
 
   > img {
     width: 100px;

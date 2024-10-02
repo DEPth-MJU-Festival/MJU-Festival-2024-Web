@@ -27,6 +27,7 @@ export const Container = styled.div`
     font: var(--NoticeTime);
     color: var(--BlueBlack);
     margin-top: 15px;
+    white-space: pre-line;
   }
 
   > h5 {
