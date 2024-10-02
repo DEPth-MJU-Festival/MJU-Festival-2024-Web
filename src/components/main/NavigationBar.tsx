@@ -50,9 +50,15 @@ const NavigationBar = forwardRef<
             key={index}
             ref={el => (itemRefs.current[index] = el)}
             onClick={() => setSelectedBar(data.id)}
-            $selected={selectedBar === data.id}
+            $selected={
+              selectedBar === data.id || (data.id === 0 && selectedBar === -1)
+            }
           >
-            <S.NavigationText $selected={selectedBar === data.id}>
+            <S.NavigationText
+              $selected={
+                selectedBar === data.id || (data.id === 0 && selectedBar === -1)
+              }
+            >
               {data.text}
             </S.NavigationText>
             {index < NavigationBarItem.length - 1 && <S.Line />}
