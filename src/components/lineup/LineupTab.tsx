@@ -1,6 +1,6 @@
 import { LineupItem } from '@constants/lineup';
 import * as S from '@styles/lineup/LineupTabStyle';
-import { forwardRef, useState } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import ImgSwitcher from '../common/ImgSwitcher';
 import NoticeTitleField from '../common/NoticeTitleField';
 
@@ -9,6 +9,13 @@ const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
   const [isLoading, setIsLoading] = useState(true);
   const isPrevDisabled = selectedId === 0;
   const isNextDisabled = selectedId === LineupItem.length - 1;
+
+  useEffect(() => {
+    LineupItem.forEach(item => {
+      const img = new Image();
+      img.src = item.img;
+    });
+  }, []);
 
   const handlePrev = () => {
     setSelectedId(prev => Math.max(prev - 1, 0));
