@@ -7,14 +7,7 @@ import Img6 from '@images/lineup/6.jfif';
 import Img7 from '@images/lineup/7.jfif';
 import Img8 from '@images/lineup/8.jfif';
 
-type Props = {
-  id: number;
-  img: string;
-  caption: string;
-  title: string;
-}[];
-
-export const LineupItem: Props = [
+export const LineupItem = [
   {
     id: 0,
     img: Img1,
