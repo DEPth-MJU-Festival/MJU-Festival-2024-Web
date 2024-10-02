@@ -1,11 +1,11 @@
-import Img1 from '@images/lineup/1.jfif';
-import Img2 from '@images/lineup/2.jfif';
-import Img3 from '@images/lineup/3.jfif';
-import Img4 from '@images/lineup/4.jfif';
-import Img5 from '@images/lineup/5.jfif';
-import Img6 from '@images/lineup/6.jfif';
-import Img7 from '@images/lineup/7.jfif';
-import Img8 from '@images/lineup/8.jfif';
+import Img1 from '@images/lineup/1.webp';
+import Img2 from '@images/lineup/2.webp';
+import Img3 from '@images/lineup/3.webp';
+import Img4 from '@images/lineup/4.webp';
+import Img5 from '@images/lineup/5.webp';
+import Img6 from '@images/lineup/6.webp';
+import Img7 from '@images/lineup/7.webp';
+import Img8 from '@images/lineup/8.webp';
 
 export const LineupItem = [
   {

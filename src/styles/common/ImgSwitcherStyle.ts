@@ -7,6 +7,7 @@ export const ImgWrap = styled.div`
   > img {
     border-radius: 6px;
     box-shadow: 0px 0px 8px 0px rgba(141, 166, 212, 0.3);
+    background-color: #fff;
   }
 `;
 

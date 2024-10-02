@@ -1,14 +1,14 @@
-import Img1 from '@images/event/1.png';
-import Img2 from '@images/event/2.png';
-import Img3 from '@images/event/3.png';
-import Img4 from '@images/event/4.png';
-import Img5 from '@images/event/5.png';
-import Img6 from '@images/event/6.png';
-import Img7 from '@images/event/7.png';
-import Img8 from '@images/event/8.png';
-import Img9 from '@images/event/9.png';
-import Img10 from '@images/event/10.png';
-import Img11 from '@images/event/11.png';
+import Img1 from '@images/event/1.webp';
+import Img2 from '@images/event/2.webp';
+import Img3 from '@images/event/3.webp';
+import Img4 from '@images/event/4.webp';
+import Img5 from '@images/event/5.webp';
+import Img6 from '@images/event/6.webp';
+import Img7 from '@images/event/7.webp';
+import Img8 from '@images/event/8.webp';
+import Img9 from '@images/event/9.webp';
+import Img10 from '@images/event/10.webp';
+import Img11 from '@images/event/11.webp';
 
 export const EventList = [
   {
