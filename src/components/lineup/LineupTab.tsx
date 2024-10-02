@@ -1,10 +1,18 @@
-import { LineupItem } from '@constants/lineup';
 import * as S from '@styles/lineup/LineupTabStyle';
 import { forwardRef, useState } from 'react';
 import ImgSwitcher from '../common/ImgSwitcher';
 import NoticeTitleField from '../common/NoticeTitleField';
 
-const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
+type Props = {
+  LineupItem: {
+    id: number;
+    img: string;
+    caption: string;
+    title: string;
+  }[];
+};
+
+const LineupTab = forwardRef<HTMLDivElement, Props>(({ LineupItem }, ref) => {
   const [selectedId, setSelectedId] = useState(0);
 
   const isPrevDisabled = selectedId === 0;
@@ -19,7 +27,7 @@ const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
   };
 
   return (
-    <div ref={ref} style={{ minHeight: 500 }}>
+    <div ref={ref} style={{ minHeight: 550 }}>
       <ImgSwitcher
         img={LineupItem[selectedId].img}
         handlePrev={handlePrev}

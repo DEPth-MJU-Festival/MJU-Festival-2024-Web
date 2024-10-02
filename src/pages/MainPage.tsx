@@ -63,7 +63,7 @@ const MainPage = () => {
       case 1:
         return <TimeTableTab ref={el => (tabRefs.current[1] = el)} />;
       case 2:
-        return <LineupTab ref={el => (tabRefs.current[2] = el)} />;
+        return <LineupTab ref={el => (tabRefs.current[2] = el)} LineupItem={LineupItem} />;
       case 3:
         return (
           <BoothFoodTab
