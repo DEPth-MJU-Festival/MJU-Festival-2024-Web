@@ -1,7 +1,7 @@
+import * as S from '@styles/goods/LocationTabStyle';
 import { LocationList } from '@/constants/goods';
 import MapImg from '@images/affiliateditems/Map.png';
 import GoogleMapsIcon from '@icons/header/GoogleMaps.svg?react';
-import * as S from '@styles/goods/LocationTabStyle';
 
 const LocationTab = () => {
   return (
