@@ -1,11 +1,20 @@
-import { forwardRef, useState } from 'react';
+import { forwardRef, useEffect, useState } from 'react';
 import TabBar from '../common/TapBar';
 import AffiliatedItemTab from './AffiliatedItemTab';
 import BrandBoothTab from './BrandBoothTab';
 import NoticeTextField from '../common/NoticeTextField';
+import MapImg from '@images/affiliateditems/Map.png';
 
 const AffiliatedItemsTab = forwardRef<HTMLDivElement>((_, ref) => {
   const [selectedId, setSelectedId] = useState(0);
+
+  useEffect(() => {
+    const preloadImages = [MapImg];
+    preloadImages.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   return (
     <div ref={ref}>

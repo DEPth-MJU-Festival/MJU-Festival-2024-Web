@@ -13,6 +13,8 @@ import AffiliatedItemsTab from '@/components/affiliateditems/AffiliatedItemsTab'
 import GoodsTab from '@/components/goods/GoodsTab';
 import { LineupItem } from '@/constants/lineup';
 import { EventList } from '@/constants/event';
+import MapTextImg from '@images/timetable/Map.svg';
+import MapImg from '@images/boothfood/Map.png';
 
 const preloadLineupImages = LineupItem.map(item => item.img);
 const preloadEventImages = EventList.map(item => item.img);
@@ -24,7 +26,12 @@ const MainPage = () => {
   const tabRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
-    const preloadImages = [...preloadLineupImages, ...preloadEventImages];
+    const preloadImages = [
+      MapImg,
+      MapTextImg,
+      ...preloadLineupImages,
+      ...preloadEventImages,
+    ];
     preloadImages.forEach(src => {
       const img = new Image();
       img.src = src;
@@ -64,7 +71,12 @@ const MainPage = () => {
       case 0:
         return <MainTab ref={el => (tabRefs.current[0] = el)} />;
       case 1:
-        return <TimeTableTab ref={el => (tabRefs.current[1] = el)} />;
+        return (
+          <TimeTableTab
+            ref={el => (tabRefs.current[1] = el)}
+            preloadImage={MapTextImg}
+          />
+        );
       case 2:
         return (
           <LineupTab
@@ -76,6 +88,7 @@ const MainPage = () => {
         return (
           <BoothFoodTab
             ref={el => (tabRefs.current[3] = el)}
+            preloadImage={MapImg}
             navigationHeight={navigationHeight}
           />
         );
