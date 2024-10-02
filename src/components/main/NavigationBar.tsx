@@ -6,7 +6,7 @@ const NavigationBar = forwardRef<
   HTMLDivElement,
   {
     selectedBar: number;
-    setSelectedBar: React.Dispatch<React.SetStateAction<number>>;
+    setSelectedBar: (id: number) => void;
   }
 >(({ selectedBar, setSelectedBar }, ref) => {
   const containerRef = ref as React.RefObject<HTMLDivElement>;

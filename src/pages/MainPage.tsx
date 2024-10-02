@@ -15,9 +15,20 @@ import { LineupItem } from '@/constants/lineup';
 import { EventList } from '@/constants/event';
 import MapTextImg from '@images/timetable/Map.svg';
 import MapImg from '@images/boothfood/Map.png';
+import { GoodsList } from '@/constants/goods';
+import { FleaMarketList } from '@/constants/fleamarket';
+import { AffiliateBarList } from '@/constants/affiliatebar';
+import { AffiliatedItemList } from '@/constants/affiliateditems';
+import PosterImg from '@images/main/Poster.png';
 
 const preloadLineupImages = LineupItem.map(item => item.img);
 const preloadEventImages = EventList.map(item => item.img);
+const preloadGoodsImages = GoodsList.map(item => item.img);
+const preloadFleaMarketImages = FleaMarketList.map(item => item.img);
+const preloadBarImages = AffiliateBarList.map(item => item.img);
+const preloadItemImages = AffiliatedItemList.flatMap(item =>
+  item.item.map(data => data.img),
+);
 
 const MainPage = () => {
   const [selectedBar, setSelectedBar] = useState(-1);
@@ -27,10 +38,15 @@ const MainPage = () => {
 
   useEffect(() => {
     const preloadImages = [
+      PosterImg,
       MapImg,
       MapTextImg,
       ...preloadLineupImages,
       ...preloadEventImages,
+      ...preloadFleaMarketImages,
+      ...preloadBarImages,
+      ...preloadItemImages,
+      ...preloadGoodsImages,
     ];
     preloadImages.forEach(src => {
       const img = new Image();
@@ -66,10 +82,23 @@ const MainPage = () => {
     scrollToTab(selectedBar);
   }, [scrollToTab, selectedBar]);
 
+  const handleBarClick = (id: number) => {
+    if (selectedBar === id) {
+      scrollToTab(id);
+    } else {
+      setSelectedBar(id);
+    }
+  };
+
   const renderTab = () => {
     switch (selectedBar) {
       case 0:
-        return <MainTab ref={el => (tabRefs.current[0] = el)} />;
+        return (
+          <MainTab
+            ref={el => (tabRefs.current[0] = el)}
+            preloadImage={PosterImg}
+          />
+        );
       case 1:
         return (
           <TimeTableTab
@@ -93,7 +122,12 @@ const MainPage = () => {
           />
         );
       case 4:
-        return <FleaMarketTab ref={el => (tabRefs.current[4] = el)} />;
+        return (
+          <FleaMarketTab
+            ref={el => (tabRefs.current[4] = el)}
+            preloadImages={preloadFleaMarketImages}
+          />
+        );
       case 5:
         return (
           <EventTab
@@ -102,13 +136,33 @@ const MainPage = () => {
           />
         );
       case 6:
-        return <AffiliateBarTab ref={el => (tabRefs.current[6] = el)} />;
+        return (
+          <AffiliateBarTab
+            ref={el => (tabRefs.current[6] = el)}
+            preloadImages={preloadBarImages}
+          />
+        );
       case 7:
-        return <AffiliatedItemsTab ref={el => (tabRefs.current[7] = el)} />;
+        return (
+          <AffiliatedItemsTab
+            ref={el => (tabRefs.current[7] = el)}
+            preloadImages={preloadItemImages}
+          />
+        );
       case 8:
-        return <GoodsTab ref={el => (tabRefs.current[8] = el)} />;
+        return (
+          <GoodsTab
+            ref={el => (tabRefs.current[8] = el)}
+            preloadImages={preloadGoodsImages}
+          />
+        );
       default:
-        return <MainTab ref={el => (tabRefs.current[0] = el)} />;
+        return (
+          <MainTab
+            ref={el => (tabRefs.current[0] = el)}
+            preloadImage={PosterImg}
+          />
+        );
     }
   };
 
@@ -120,7 +174,7 @@ const MainPage = () => {
       <NavigationBar
         ref={navigationBarRef}
         selectedBar={selectedBar}
-        setSelectedBar={setSelectedBar}
+        setSelectedBar={handleBarClick}
       />
       {renderTab()}
     </div>

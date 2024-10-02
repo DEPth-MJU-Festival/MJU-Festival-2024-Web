@@ -2,6 +2,7 @@ import * as S from '@styles/common/ListItemStyle';
 
 const ListItem = ({
   data,
+  preloadImage,
   onClick,
   isDeep = false,
 }: {
@@ -10,6 +11,7 @@ const ListItem = ({
     title: string;
     description?: string;
   };
+  preloadImage?: string;
   onClick?: () => void;
   isDeep?: boolean;
 }) => {
@@ -19,7 +21,7 @@ const ListItem = ({
       style={{ cursor: onClick && 'pointer' }}
       $isDeep={isDeep}
     >
-      <img src={data.img} width="100%" height="100%" />
+      <img src={preloadImage || data.img} width="100%" height="100%" />
       <S.RightWrap>
         <h1>{data.title}</h1>
         {data.description && (
