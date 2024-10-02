@@ -1,5 +1,5 @@
 import { AffiliatedItemList } from '@/constants/affiliateditems';
-import * as S from '@styles/affiliateditems/AffiliatedItemStyle';
+import * as S from '@styles/affiliateditems/AffiliatedItemTabStyle';
 import ListItem from '../common/ListItem';
 import Map from '@images/affiliateditems/Map.png';
 import ChevronLeftIcon from '@icons/header/ChevronLeft.svg?react';
