@@ -1,4 +1,6 @@
 import SaeroLeader from '@/components/saero/SaeroLeader';
+import SaeroMember from '@/components/saero/SaeroMember';
+import { SaeroMembers } from '@/constants/saero';
 import Saero from '@assets/images/saero/Saero.svg?react';
 import * as S from '@styles/saero/SaeroPage';
 
@@ -11,6 +13,10 @@ const SaeroPage = () => {
         <S.SaeroTitle>새롭게, 더 나아가게</S.SaeroTitle>
       </S.SearoContainer>
       <SaeroLeader />
+
+      {SaeroMembers.map((team, index) => (
+        <SaeroMember team={team!} key={index} />
+      ))}
     </S.Container>
   );
 };
