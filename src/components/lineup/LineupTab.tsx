@@ -1,55 +1,42 @@
 import { LineupItem } from '@constants/lineup';
 import * as S from '@styles/lineup/LineupTabStyle';
 import { forwardRef, useState } from 'react';
-import RenderIcon from '../common/RenderIcon';
-import BorderIcon from '@icons/border/Border.svg?react';
 import ImgSwitcher from '../common/ImgSwitcher';
+import NoticeTitleField from '../common/NoticeTitleField';
 
-const LineupTab = forwardRef<HTMLDivElement>((_, ref) => {
-  const [selectedId, setSelectedId] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-  const isPrevDisabled = selectedId === 0;
-  const isNextDisabled = selectedId === LineupItem.length - 1;
+const LineupTab = forwardRef<HTMLDivElement, { preloadImages: string[] }>(
+  ({ preloadImages }, ref) => {
+    const [selectedId, setSelectedId] = useState(0);
 
-  const handlePrev = () => {
-    setSelectedId(prev => Math.max(prev - 1, 0));
-  };
+    const isPrevDisabled = selectedId === 0;
+    const isNextDisabled = selectedId === LineupItem.length - 1;
 
-  const handleNext = () => {
-    setSelectedId(prev => Math.min(prev + 1, LineupItem.length - 1));
-  };
+    const handlePrev = () => {
+      setSelectedId(prev => Math.max(prev - 1, 0));
+    };
 
-  return (
-    <div
-      ref={ref}
-      style={{
-        height: isLoading ? 1500 : 'auto',
-      }}
-    >
-      <ImgSwitcher
-        img={LineupItem[selectedId].img}
-        handlePrev={handlePrev}
-        isPrevDisabled={isPrevDisabled}
-        handleNext={handleNext}
-        isNextDisabled={isNextDisabled}
-        setIsLoading={setIsLoading}
-      />
-      <S.NameWrap>
-        {RenderIcon('LeftTop', 0, 16, BorderIcon)}
-        {RenderIcon('RightTop', 90, 16, BorderIcon)}
-        {RenderIcon('RightBottom', 180, 16, BorderIcon)}
-        {RenderIcon('LeftBottom', 270, 16, BorderIcon)}
-        <h3>DAY {LineupItem[selectedId].day}</h3>
-        <hr />
-        <h1>{LineupItem[selectedId].name}</h1>
-      </S.NameWrap>
-      <S.CircleWrap>
-        {LineupItem.map((_, index) => (
-          <S.Circle key={index} $selected={selectedId === index} />
-        ))}
-      </S.CircleWrap>
-    </div>
-  );
-});
+    const handleNext = () => {
+      setSelectedId(prev => Math.min(prev + 1, LineupItem.length - 1));
+    };
+
+    return (
+      <div ref={ref} style={{ minHeight: 550 }}>
+        <ImgSwitcher
+          img={preloadImages[selectedId]}
+          handlePrev={handlePrev}
+          isPrevDisabled={isPrevDisabled}
+          handleNext={handleNext}
+          isNextDisabled={isNextDisabled}
+        />
+        <NoticeTitleField data={LineupItem[selectedId]} />
+        <S.CircleWrap>
+          {LineupItem.map((_, index) => (
+            <S.Circle key={index} $selected={selectedId === index} />
+          ))}
+        </S.CircleWrap>
+      </div>
+    );
+  },
+);
 
 export default LineupTab;

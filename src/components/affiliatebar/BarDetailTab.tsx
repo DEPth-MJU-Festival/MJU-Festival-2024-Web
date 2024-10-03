@@ -55,7 +55,9 @@ const BarDetailTab = ({
             <p>{AffiliateBarList[selectedId].location}</p>
           </S.InforWrap>
         </S.InforWrap>
-        <S.LinkBtn>
+        <S.LinkBtn
+          onClick={() => window.open(AffiliateBarList[selectedId].link)}
+        >
           <LocationIcon color="var(--PaleYellow)" />
           <p>네이버 지도 앱으로 이동</p>
         </S.LinkBtn>

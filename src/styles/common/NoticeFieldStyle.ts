@@ -27,6 +27,7 @@ export const Container = styled.div`
     font: var(--NoticeTime);
     color: var(--BlueBlack);
     margin-top: 15px;
+    white-space: pre-line;
   }
 
   > h5 {
@@ -56,5 +57,34 @@ export const LocationWrap = styled.div`
   > p {
     font: var(--NoticeTime);
     color: var(--BlueBlack);
+  }
+`;
+
+export const TitleContainer = styled.div`
+  position: relative;
+  background-color: var(--PastelBlue);
+  box-shadow: 0px 0px 8px 0px rgba(141, 166, 212, 0.3);
+  margin: 30px 16px;
+  height: 141px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 6px;
+
+  > h3 {
+    width: calc(100% - 32px);
+    font: var(--NoticeSubtitle);
+    color: var(--White);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--White);
+  }
+
+  > h1 {
+    font: var(--SigerName);
+    color: var(--PaleYellow);
   }
 `;

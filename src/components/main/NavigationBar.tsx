@@ -6,7 +6,7 @@ const NavigationBar = forwardRef<
   HTMLDivElement,
   {
     selectedBar: number;
-    setSelectedBar: React.Dispatch<React.SetStateAction<number>>;
+    setSelectedBar: (id: number) => void;
   }
 >(({ selectedBar, setSelectedBar }, ref) => {
   const containerRef = ref as React.RefObject<HTMLDivElement>;
@@ -50,9 +50,15 @@ const NavigationBar = forwardRef<
             key={index}
             ref={el => (itemRefs.current[index] = el)}
             onClick={() => setSelectedBar(data.id)}
-            $selected={selectedBar === data.id}
+            $selected={
+              selectedBar === data.id || (data.id === 0 && selectedBar === -1)
+            }
           >
-            <S.NavigationText $selected={selectedBar === data.id}>
+            <S.NavigationText
+              $selected={
+                selectedBar === data.id || (data.id === 0 && selectedBar === -1)
+              }
+            >
               {data.text}
             </S.NavigationText>
             {index < NavigationBarItem.length - 1 && <S.Line />}
