@@ -1,12 +1,14 @@
-import * as S from '@styles/main/MainPageStyle';
-import NoticeBtn from '@components/main/NoticeBtn';
-import NavigationBar from '@components/main/NavigationBar';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import MainTab from '@components/main/MainTab';
-import TimeTableTab from '@components/timetable/TimeTableTab';
-import LineupTab from '@components/lineup/LineupTab';
+import LostItemTab from '@/components/lostItem/LostItemTab';
+import AffiliateBarTab from '@components/affiliatebar/AffiliateBarTab';
 import BoothFoodTab from '@components/boothfood/BoothFoodTab';
 import FleaMarketTab from '@components/fleamarket/FleaMarketTab';
+import LineupTab from '@components/lineup/LineupTab';
+import MainTab from '@components/main/MainTab';
+import NavigationBar from '@components/main/NavigationBar';
+import NoticeBtn from '@components/main/NoticeBtn';
+import TimeTableTab from '@components/timetable/TimeTableTab';
+import * as S from '@styles/main/MainPageStyle';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import AffiliateBarTab from '@components/affiliatebar/AffiliateBarTab';
 import EventTab from '@/components/event/EventTab';
 import AffiliatedItemsTab from '@/components/affiliateditems/AffiliatedItemsTab';
@@ -136,6 +138,7 @@ const MainPage = () => {
           />
         );
       case 6:
+
         return (
           <AffiliateBarTab
             ref={el => (tabRefs.current[6] = el)}
@@ -156,6 +159,8 @@ const MainPage = () => {
             preloadImages={preloadGoodsImages}
           />
         );
+      case 9:
+        return <LostItemTab ref={el => (tabRefs.current[9] = el)} />;
       default:
         return (
           <MainTab
