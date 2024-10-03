@@ -9,7 +9,7 @@ const NoticePage = () => {
   const [searchParams] = useSearchParams();
   const page = searchParams.get('page') || '1';
 
-  const { data, refetch, isLoading } = useGetNotice(Number(page), 6);
+  const { data, refetch } = useGetNotice(Number(page), 6);
 
   const noticeList = data?.data?.information?.dataList || [];
   const totalPage = data?.data.information.pageInfo.totalPage || 0;
@@ -20,10 +20,7 @@ const NoticePage = () => {
 
   return (
     <S.Container>
-      {isLoading && <S.LoadingMessage>로딩 중입니다...</S.LoadingMessage>}
-
       <S.Title>공지사항</S.Title>
-
       {noticeList.length > 0 ? (
         noticeList.map((content, index) => (
           <NoticePreviewComponent content={content} key={index} />
