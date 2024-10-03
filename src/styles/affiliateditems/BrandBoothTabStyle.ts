@@ -38,10 +38,6 @@ export const ListWrap = styled.div`
     }
   }
 
-  > img {
-    margin-bottom: 10px;
-  }
-
   > h6 {
     color: var(--BlueBlack);
     font: var(--BodyText);

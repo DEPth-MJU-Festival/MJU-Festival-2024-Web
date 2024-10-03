@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div<{ $isDeep: boolean }>`
   margin: 0 16px;
-  padding: 25.5px 0;
+  padding: ${props => (props.$isDeep ? '15px 0' : '25.5px 0')};
   display: flex;
   position: relative;
   gap: 14px;
@@ -10,12 +10,6 @@ export const Container = styled.div<{ $isDeep: boolean }>`
     props.$isDeep
       ? '1.5px solid var(--DeepBlue)'
       : '1.5px solid  var(--PastelBlue)'};
-
-  > img {
-    width: 100px;
-    border-radius: 6px;
-    box-shadow: 0px 0px 8px 0px rgba(141, 166, 212, 0.3);
-  }
 `;
 
 export const RightWrap = styled.div`

@@ -8,12 +8,6 @@ export const Container = styled.div`
   margin: 30px 45px 0;
   padding-bottom: 60px;
 
-  img {
-    border-radius: 6px;
-    margin: 15px 0;
-    box-shadow: 0px 0px 8px 0px rgba(141, 166, 212, 0.3);
-  }
-
   h1 {
     font: var(--HeaderG);
     color: var(--BlueBlack);
