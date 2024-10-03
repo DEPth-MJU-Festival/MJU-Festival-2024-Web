@@ -3,12 +3,6 @@ import styled from 'styled-components';
 export const ImgWrap = styled.div`
   position: relative;
   margin: 38px;
-
-  > img {
-    border-radius: 6px;
-    box-shadow: 0px 0px 8px 0px rgba(141, 166, 212, 0.3);
-    background-color: #fff;
-  }
 `;
 
 export const IconBtn = styled.button`

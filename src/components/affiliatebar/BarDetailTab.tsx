@@ -31,6 +31,7 @@ const BarDetailTab = ({
         isPrevDisabled={isPrevDisabled}
         handleNext={handleNext}
         isNextDisabled={isNextDisabled}
+        paddingTop="100%"
       />
       <h1>{AffiliateBarList[selectedId].title}</h1>
       <S.DetailWrap>
