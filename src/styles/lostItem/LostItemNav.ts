@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 60px;
+  margin-bottom: 0;
 `;
 
 export const NavItem = styled.div<{ isActive: boolean }>`
@@ -22,7 +23,9 @@ export const NavItem = styled.div<{ isActive: boolean }>`
   border-top: ${props =>
     props.isActive ? 'var(--PastelBlue) 1.5px solid' : ''};
   border-bottom: ${props =>
-    !props.isActive ? 'var(--PastelBlue) 1.5px solid' : ''};
+    !props.isActive
+      ? 'var(--PastelBlue) 1.5px solid'
+      : 'var(--PaleBlue) 1.5px solid'};
   border-left: ${props =>
     props.isActive ? 'var(--PastelBlue) 1.5px solid' : ''};
   border-right: ${props =>

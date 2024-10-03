@@ -10,8 +10,6 @@ export const ItemContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin-top: 20px;
   width: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  margin: 0;
 `;
