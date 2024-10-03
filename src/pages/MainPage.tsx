@@ -1,4 +1,13 @@
+import AffiliatedItemsTab from '@/components/affiliateditems/AffiliatedItemsTab';
+import EventTab from '@/components/event/EventTab';
+import GoodsTab from '@/components/goods/GoodsTab';
 import LostItemTab from '@/components/lostItem/LostItemTab';
+import { AffiliateBarList } from '@/constants/affiliatebar';
+import { AffiliatedItemList } from '@/constants/affiliateditems';
+import { EventList } from '@/constants/event';
+import { FleaMarketList } from '@/constants/fleamarket';
+import { GoodsList } from '@/constants/goods';
+import { LineupItem } from '@/constants/lineup';
 import AffiliateBarTab from '@components/affiliatebar/AffiliateBarTab';
 import BoothFoodTab from '@components/boothfood/BoothFoodTab';
 import FleaMarketTab from '@components/fleamarket/FleaMarketTab';
@@ -7,21 +16,11 @@ import MainTab from '@components/main/MainTab';
 import NavigationBar from '@components/main/NavigationBar';
 import NoticeBtn from '@components/main/NoticeBtn';
 import TimeTableTab from '@components/timetable/TimeTableTab';
+import MapImg from '@images/boothfood/Map.png';
+import PosterImg from '@images/main/Poster.png';
+import MapTextImg from '@images/timetable/Map.svg';
 import * as S from '@styles/main/MainPageStyle';
 import { useCallback, useEffect, useRef, useState } from 'react';
-import AffiliateBarTab from '@components/affiliatebar/AffiliateBarTab';
-import EventTab from '@/components/event/EventTab';
-import AffiliatedItemsTab from '@/components/affiliateditems/AffiliatedItemsTab';
-import GoodsTab from '@/components/goods/GoodsTab';
-import { LineupItem } from '@/constants/lineup';
-import { EventList } from '@/constants/event';
-import MapTextImg from '@images/timetable/Map.svg';
-import MapImg from '@images/boothfood/Map.png';
-import { GoodsList } from '@/constants/goods';
-import { FleaMarketList } from '@/constants/fleamarket';
-import { AffiliateBarList } from '@/constants/affiliatebar';
-import { AffiliatedItemList } from '@/constants/affiliateditems';
-import PosterImg from '@images/main/Poster.png';
 
 const preloadLineupImages = LineupItem.map(item => item.img);
 const preloadEventImages = EventList.map(item => item.img);
@@ -138,7 +137,6 @@ const MainPage = () => {
           />
         );
       case 6:
-
         return (
           <AffiliateBarTab
             ref={el => (tabRefs.current[6] = el)}

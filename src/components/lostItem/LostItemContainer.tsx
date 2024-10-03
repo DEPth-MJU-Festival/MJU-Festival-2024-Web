@@ -14,7 +14,6 @@ const LostItemContainer = () => {
     refetch();
   }, [naviTap]);
   const ItemList = data.data.information;
-  console.log(ItemList);
 
   return (
     <S.Container>
