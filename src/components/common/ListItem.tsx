@@ -27,7 +27,7 @@ const ListItem = ({
       <div
         style={{
           position: 'relative',
-          width: '100px',
+          minWidth: '100px',
           height: '75px',
         }}
       >

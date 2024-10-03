@@ -10,7 +10,7 @@ const LocationTab = () => {
   return (
     <S.Container>
       <div>
-        <h1>이벤트&굿즈 안내</h1>
+        <h1>위치 안내</h1>
         <div
           style={{
             position: 'relative',
@@ -38,7 +38,7 @@ const LocationTab = () => {
         </div>
         <S.LocationWrap>
           <GoogleMapsIcon color="var(--DeepBlue)" />
-          <p>종합관 관 이벤트 & 굿즈 부스</p>
+          <p>종합관 앞 이벤트 & 굿즈 부스</p>
         </S.LocationWrap>
       </div>
       {LocationList.map((data, index) => {
