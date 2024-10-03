@@ -1,7 +1,7 @@
-import * as S from '@styles/layout/HeaderStyle';
+import ChevronLeftBigIcon from '@icons/header/ChevronLeftBig.svg?react';
 import LogoIcon from '@icons/logo/Logo.svg?react';
 import SaerLogoIcon from '@icons/logo/SaerLogo.svg?react';
-import ChevronLeftBigIcon from '@icons/header/ChevronLeftBig.svg?react';
+import * as S from '@styles/layout/HeaderStyle';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
       <S.RightWrap
         onClick={() => {
           window.scrollTo({ top: 0, behavior: 'smooth' });
-          navigate('/saer');
+          navigate('/saero');
         }}
       >
         <SaerLogoIcon />
