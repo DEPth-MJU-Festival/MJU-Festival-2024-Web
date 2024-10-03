@@ -30,7 +30,7 @@ const NoticePage = () => {
       ) : (
         <S.NoNoticeMessage>공지사항이 없습니다.</S.NoNoticeMessage>
       )}
-      <NoticePageBar noticeList={noticeList} />
+      <NoticePageBar totalPage={data.data.information.pageInfo.totalPage} />
     </S.Container>
   );
 };
