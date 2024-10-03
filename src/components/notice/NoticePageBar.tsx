@@ -13,6 +13,26 @@ const NoticePageBar = ({ totalPage }: { totalPage: number }) => {
     setSearchParams(searchParams);
   };
 
+  const handlePrevPage = () => {
+    if (Number(currentPage) > 1) {
+      searchParams.set(
+        'page',
+        decodeURIComponent((Number(currentPage) - 1).toString()),
+      );
+      setSearchParams(searchParams);
+    }
+  };
+
+  const handleNextPage = () => {
+    if (Number(currentPage) < totalPage) {
+      searchParams.set(
+        'page',
+        decodeURIComponent((Number(currentPage) + 1).toString()),
+      );
+      setSearchParams(searchParams);
+    }
+  };
+
   useEffect(() => {
     if (!currentPage) {
       searchParams.set('page', decodeURIComponent('1'));
@@ -25,6 +45,7 @@ const NoticePageBar = ({ totalPage }: { totalPage: number }) => {
       <Chevron
         style={{ cursor: 'pointer' }}
         fill={currentPage === '1' ? 'var(--PaleBlue)' : 'black'}
+        onClick={handlePrevPage}
       />
       {pageList.map((item, index) => {
         const page = item; // 숫자 값으로 가정
@@ -42,6 +63,7 @@ const NoticePageBar = ({ totalPage }: { totalPage: number }) => {
       <Chevron
         style={{ cursor: 'pointer', transform: 'rotate(180deg)' }}
         fill={Number(currentPage) === totalPage ? 'var(--PaleBlue)' : 'black'}
+        onClick={handleNextPage}
       />
     </S.Container>
   );
