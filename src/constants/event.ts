@@ -1,4 +1,6 @@
 import Img1 from '@images/event/1.webp';
+import Img10 from '@images/event/10.webp';
+import Img11 from '@images/event/11.webp';
 import Img2 from '@images/event/2.webp';
 import Img3 from '@images/event/3.webp';
 import Img4 from '@images/event/4.webp';
@@ -7,8 +9,6 @@ import Img6 from '@images/event/6.webp';
 import Img7 from '@images/event/7.webp';
 import Img8 from '@images/event/8.webp';
 import Img9 from '@images/event/9.webp';
-import Img10 from '@images/event/10.webp';
-import Img11 from '@images/event/11.webp';
 
 export const EventList = [
   {
@@ -97,7 +97,7 @@ export const EventDropdownList = [
       {
         title: '낭만 모음.zip',
         description:
-          '천진낭만 ‘낭만 모음.zip’ 이벤트 안내\n\n운영 날짜 및 시간\n- 날짜: 2024.10.7.\n월)~2024.10.8.(화)\n- 시간: 10:00~18:00\n\n위치\n총학생회 이벤트 부스\n\n진행 대상\n명지대학교 인문캠퍼스 2024 - 2학기 재학생\n* 리플렛 양일 5,000장 (총 10,000장 배부)\n\n참여 방법\n총학생회 운영(팔찌) 부스에서 리플렛을 수령한다.\n부스 참여 후 스티커를 8개 이상 모은다.\n총학생회 이벤트 부스로 방문해 명단을 작성한다.\n\n안내 사항\n- 해당 추첨 이벤트는 학적변동내역을 통한 재학생 인증 후 참여 가능합니다.\n- 많은 학우님들의 참여를 위해 1일차, 2일차 중 하루만 참여가 가능합니다.\n- 추후 총학생회 인스타그램(@mju_saero) 라이브 방송을 통해 추첨 후 상품을 드립니다.\n\n상품\n- 에어팟 1명\n- 턴테이블 스피커 5명\n- 배달의 민족 1만원권 50명\n- 네이버 페이 5천원권 100명\n* 1일차, 2일차 명단 취합 후 156명 추첨 예정',
+          '천진낭만 ‘낭만 모음.zip’ 이벤트 안내\n\n운영 날짜 및 시간\n- 날짜: 2024.10.7.(월) ~ 2024.10.8.(화)\n- 시간: 10:00~18:00\n\n위치\n총학생회 이벤트 부스\n\n진행 대상\n명지대학교 인문캠퍼스 2024 - 2학기 재학생\n• 리플렛 양일 5,000장 (총 10,000장 배부)\n\n참여 방법\n• 총학생회 운영(팔찌) 부스에서 리플렛을 수령한다.\n• 부스 참여 후 스티커를 8개 이상 모은다.\n• 총학생회 이벤트 부스로 방문해 명단을 작성한다.\n\n안내 사항\n- 해당 추첨 이벤트는 학적변동내역을 통한 재학생 인증 후 참여 가능합니다.\n- 많은 학우님들의 참여를 위해 1일차, 2일차 중 하루만 참여가 가능합니다.\n- 추후 총학생회 인스타그램(@mju_saero) 라이브 방송을 통해 추첨 후 상품을 드립니다.\n\n상품\n- 에어팟 1명\n- 턴테이블 스피커 5명\n- 배달의 민족 1만원권 50명\n- 네이버 페이 5천원권 100명\n* 1일차, 2일차 명단 취합 후 156명 추첨 예정',
       },
     ],
   },
