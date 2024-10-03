@@ -1,13 +1,29 @@
 import { AffiliatedItemList } from '@/constants/affiliateditems';
 import * as S from '@styles/affiliateditems/AffiliatedItemTabStyle';
 import ListItem from '../common/ListItem';
-import Map from '@images/affiliateditems/Map.png';
+import MapImg from '@images/affiliateditems/Map.png';
 import ChevronLeftIcon from '@icons/header/ChevronLeft.svg?react';
 import GoogleMapsIcon from '@icons/header/GoogleMaps.svg?react';
 import { useState } from 'react';
 
-const AffiliatedItemTab = ({ preloadImages }: { preloadImages: string[] }) => {
+const paddingTopValues = [
+  '7.25%',
+  '10.34%',
+  '12.29%',
+  '8.37%',
+  '6.70%',
+  '6.15%',
+];
+
+const AffiliatedItemTab = ({
+  preloadImages,
+  preloadLogoImages,
+}: {
+  preloadImages: string[];
+  preloadLogoImages: string[];
+}) => {
   const [selectedIds, setSelectedIds] = useState<number[]>([]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const handleSelect = (id: number) => {
     if (selectedIds.includes(id)) {
@@ -24,7 +40,28 @@ const AffiliatedItemTab = ({ preloadImages }: { preloadImages: string[] }) => {
       {AffiliatedItemList.map((data, index) => {
         return (
           <S.ListWrap key={index}>
-            <img src={data.logoImg} />
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                paddingTop: paddingTopValues[index],
+              }}
+            >
+              <img
+                src={preloadLogoImages[index]}
+                onLoad={() => setIsLoaded(true)}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: isLoaded ? 1 : 0,
+                  transition: 'opacity 0.8s ease-in-out',
+                }}
+              />
+            </div>
             <p>{data.description}</p>
             <S.ItemWrap>
               {data.item.map((item, index) => {
@@ -49,7 +86,28 @@ const AffiliatedItemTab = ({ preloadImages }: { preloadImages: string[] }) => {
                 </S.ButtonWrap>
                 {selectedIds.includes(data.id) && (
                   <S.SelectedWrap>
-                    <img src={Map} width="100%" />
+                    <div
+                      style={{
+                        position: 'relative',
+                        width: '100%',
+                        paddingTop: '57.51%',
+                      }}
+                    >
+                      <img
+                        src={MapImg}
+                        onLoad={() => setIsLoaded(true)}
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                          opacity: isLoaded ? 1 : 0,
+                          transition: 'opacity 0.8s ease-in-out',
+                        }}
+                      />
+                    </div>
                     <div>
                       <GoogleMapsIcon color="var(--DeepBlue" />
                       <h6>{data.location}</h6>

@@ -4,6 +4,7 @@ import BoothTab from './BoothTab';
 import FoodTab from './FoodTab';
 import TabBar from '../common/TapBar';
 import { BoothItemList, FoodItemList } from '@/constants/boothfood';
+import NightBoothLongImg from '@images/boothfood/NightBooth/NightBoothLong.png';
 
 const BoothFoodTab = forwardRef<
   HTMLDivElement,
@@ -16,6 +17,7 @@ const BoothFoodTab = forwardRef<
     const preloadImages = [
       ...BoothItemList.flatMap(item => item.item.map(data => data.img)),
       ...FoodItemList.map(data => data.img),
+      NightBoothLongImg,
     ];
 
     preloadImages.forEach(src => {

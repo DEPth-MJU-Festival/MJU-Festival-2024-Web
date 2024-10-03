@@ -24,10 +24,6 @@ export const ItemWrap = styled.div`
     border-bottom: 1px solid var(--SoftBlue);
   }
 
-  > img {
-    margin: 30px 0;
-  }
-
   > h5 {
     color: var(--BlueBlack);
     font: var(--BodyText);

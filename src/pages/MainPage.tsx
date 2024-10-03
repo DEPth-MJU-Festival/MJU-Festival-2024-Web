@@ -27,6 +27,7 @@ const preloadEventImages = EventList.map(item => item.img);
 const preloadGoodsImages = GoodsList.map(item => item.img);
 const preloadFleaMarketImages = FleaMarketList.map(item => item.img);
 const preloadBarImages = AffiliateBarList.map(item => item.img);
+const preloadItemLogoImages = AffiliatedItemList.flatMap(item => item.logoImg);
 const preloadItemImages = AffiliatedItemList.flatMap(item =>
   item.item.map(data => data.img),
 );
@@ -46,6 +47,7 @@ const MainPage = () => {
       ...preloadEventImages,
       ...preloadFleaMarketImages,
       ...preloadBarImages,
+      ...preloadItemLogoImages,
       ...preloadItemImages,
       ...preloadGoodsImages,
     ];
@@ -148,6 +150,7 @@ const MainPage = () => {
           <AffiliatedItemsTab
             ref={el => (tabRefs.current[7] = el)}
             preloadImages={preloadItemImages}
+            preloadLogoImages={preloadItemLogoImages}
           />
         );
       case 8:

@@ -7,8 +7,8 @@ import MapImg from '@images/affiliateditems/Map.png';
 
 const AffiliatedItemsTab = forwardRef<
   HTMLDivElement,
-  { preloadImages: string[] }
->(({ preloadImages }, ref) => {
+  { preloadImages: string[]; preloadLogoImages: string[] }
+>(({ preloadImages, preloadLogoImages }, ref) => {
   const [selectedId, setSelectedId] = useState(0);
 
   useEffect(() => {
@@ -37,7 +37,10 @@ const AffiliatedItemsTab = forwardRef<
           </div>
         }
         tabContents={[
-          <AffiliatedItemTab preloadImages={preloadImages} />,
+          <AffiliatedItemTab
+            preloadImages={preloadImages}
+            preloadLogoImages={preloadLogoImages}
+          />,
           <BrandBoothTab />,
         ]}
       />

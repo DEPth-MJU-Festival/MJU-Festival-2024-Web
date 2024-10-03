@@ -6,8 +6,9 @@ import BoothItem from './BoothItem';
 import NightBoothLongImg from '@images/boothfood/NightBooth/NightBoothLong.png';
 
 const BoothTab = ({ navigationHeight }: { navigationHeight: number }) => {
-  const [selectedId, setSelectedId] = useState(0);
   const headWrapRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [selectedId, setSelectedId] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     if (selectedId !== 0) {
@@ -66,7 +67,28 @@ const BoothTab = ({ navigationHeight }: { navigationHeight: number }) => {
                   }}
                 ></div>
               ) : (
-                <img src={NightBoothLongImg} width="100%" />
+                <div
+                  style={{
+                    position: 'relative',
+                    width: '100%',
+                    paddingTop: '300.13%',
+                  }}
+                >
+                  <img
+                    src={NightBoothLongImg}
+                    onLoad={() => setIsLoaded(true)}
+                    style={{
+                      position: 'absolute',
+                      top: 0,
+                      left: 0,
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      opacity: isLoaded ? 1 : 0,
+                      transition: 'opacity 0.8s ease-in-out',
+                    }}
+                  />
+                </div>
               ))}
           </div>
         );
