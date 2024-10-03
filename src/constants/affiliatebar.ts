@@ -59,7 +59,7 @@ export const AffiliateBarList = [
     bigImg: RealPub2Img,
     title: '리얼펍&살얼음맥주 명지대점',
     description:
-      '살얼음 빨리 마시기 대결\n\n1. Table vs Table\n&nbsp;&nbsp;&nbsp;&nbsp;1등 상품 - 샤베트 중 택 1\n\n2. Table vs Real Pub\n&nbsp;&nbsp;&nbsp;&nbsp;Winner - 메뉴 중 택 1\n&nbsp;&nbsp;&nbsp;&nbsp;(18시,20시,22시,24시에 둘 중 랜덤 진행)\n\n3. 01시에 게릴라 이벤트 진행',
+      '(1) 살얼음 빨리 마시기 대결\n&nbsp;&nbsp;&nbsp;&nbsp;- Table vs Table\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1등 상품 | 샤베트 중 택 1\n&nbsp;&nbsp;&nbsp;&nbsp;- Table vs Real Pub\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Winner | 메뉴 중 택 1\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(18시,20시,22시,24시에 둘 중 랜덤 진행)\n\n(2) 1시에 게릴라 이벤트 진행',
     location: '서울 서대문구 증가로10길 36-7 1층',
     link: 'https://naver.me/5XJ83JYo',
   },

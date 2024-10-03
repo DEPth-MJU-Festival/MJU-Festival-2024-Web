@@ -279,7 +279,7 @@ export const BoothItemList = [
             host: '어우라미',
             title: '어우라미 헤나 부스',
             description: '헤나+상품 뽑기',
-            location: '',
+            location: '행정동 앞',
           },
         ],
       },
