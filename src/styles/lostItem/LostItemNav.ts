@@ -14,6 +14,7 @@ export const NavItem = styled.div<{ isActive: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   height: ${props => (props.isActive ? '51.5px' : '50px')};
   background-color: ${props =>
