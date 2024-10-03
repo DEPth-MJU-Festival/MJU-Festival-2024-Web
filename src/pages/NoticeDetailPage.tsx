@@ -5,7 +5,12 @@ const NoticeDetailPage = () => {
   const queryParams = new URLSearchParams(location.search);
   const noticeId = queryParams.get('noticeId')!;
   const { data } = useGetNoticeDetail(noticeId!);
-  const noticeDetail = data.data.information;
+  const noticeDetail = data?.data.information || {
+    title: '',
+    createdDate: '',
+    content: '',
+  };
+
   return (
     <S.Container>
       <S.BannerTitle>공지사항</S.BannerTitle>

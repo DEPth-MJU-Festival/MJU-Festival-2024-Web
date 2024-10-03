@@ -15,6 +15,7 @@ const LostItemNav = ({
         <S.NavItem
           key={index}
           isActive={tap === naviTap}
+          naviTap={naviTap}
           onClick={() => setNaviTap(tap)}
         >
           {tap}

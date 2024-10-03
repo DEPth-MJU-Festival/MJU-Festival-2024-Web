@@ -13,7 +13,7 @@ const LostItemContainer = () => {
   useEffect(() => {
     refetch();
   }, [naviTap]);
-  const ItemList = data.data.information;
+  const ItemList = data?.data.information || [];
 
   return (
     <S.Container>

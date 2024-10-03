@@ -12,6 +12,7 @@ const NoticePage = () => {
   const { data, refetch, isLoading } = useGetNotice(Number(page), 6);
 
   const noticeList = data?.data?.information?.dataList || [];
+  const totalPage = data?.data.information.pageInfo.totalPage || 0;
 
   useEffect(() => {
     refetch();
@@ -30,7 +31,7 @@ const NoticePage = () => {
       ) : (
         <S.NoNoticeMessage>공지사항이 없습니다.</S.NoNoticeMessage>
       )}
-      <NoticePageBar totalPage={data.data.information.pageInfo.totalPage} />
+      <NoticePageBar totalPage={totalPage!} />
     </S.Container>
   );
 };
