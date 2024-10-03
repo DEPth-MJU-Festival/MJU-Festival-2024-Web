@@ -1,5 +1,4 @@
-import BorderLong from '@assets/icons/border/BorderLong.svg?react';
-import BorderLongRight from '@assets/icons/border/BorderLongRight.svg?react';
+import Border from '@assets/icons/border/Border.svg?react';
 
 import * as S from '@styles/lostItem/LostItemBanner';
 
@@ -7,8 +6,8 @@ const LostItemBanner = () => {
   return (
     <S.Container>
       <S.BorderContainer>
-        <BorderLong />
-        <BorderLongRight />
+        <Border />
+        <Border style={{ transform: `rotate(90deg)` }} />
       </S.BorderContainer>
       <>
         <S.Title>분실물 안내</S.Title>
@@ -22,8 +21,8 @@ const LostItemBanner = () => {
         </S.Content>
       </>
       <S.BorderContainer style={{ marginTop: '-30px' }}>
-        <BorderLongRight style={{ transform: `rotate(180deg)` }} />
-        <BorderLong style={{ transform: `rotate(180deg)` }} />
+        <Border style={{ transform: `rotate(270deg)` }} />
+        <Border style={{ transform: `rotate(180deg)` }} />
       </S.BorderContainer>
     </S.Container>
   );

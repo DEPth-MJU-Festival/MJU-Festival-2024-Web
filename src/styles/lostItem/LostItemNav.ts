@@ -21,18 +21,17 @@ export const NavItem = styled.div<{ isActive: boolean; naviTap: NaviTapType }>`
     props.isActive ? 'var(--PaleBlue)' : 'var(--SoftBlue)'};
   font: ${props => (props.isActive ? 'var(--TapFocus)' : 'var(--TapDefault)')};
   color: ${props => (props.isActive ? 'var(--SoftBlue)' : 'white')};
-  border-top: ${props =>
-    props.isActive ? 'var(--PastelBlue) 1.5px solid' : ''};
+  border-top: ${props => (props.isActive ? 'var(--PastelBlue) 2px solid' : '')};
   border-bottom: ${props =>
     !props.isActive
-      ? 'var(--PastelBlue) 1.5px solid'
-      : 'var(--PaleBlue) 1.5px solid'};
+      ? 'var(--PastelBlue) 2px solid'
+      : 'var(--PaleBlue) 2px solid'};
   border-left: ${props =>
     props.isActive && props.naviTap !== '의류'
-      ? 'var(--PastelBlue) 1.5px solid'
+      ? 'var(--PastelBlue) 2px solid'
       : ''};
   border-right: ${props =>
     props.isActive && props.naviTap !== '기타'
-      ? 'var(--PastelBlue) 1.5px solid'
+      ? 'var(--PastelBlue) 2px solid'
       : ''};
 `;
