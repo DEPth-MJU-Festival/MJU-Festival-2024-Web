@@ -50,7 +50,7 @@ export const SaeroMembers = [
       },
       {
         name: '강용민',
-        info: '정회 21',
+        info: '정외 21',
       },
     ],
   },
