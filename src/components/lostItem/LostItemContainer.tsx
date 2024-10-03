@@ -1,17 +1,26 @@
+import { useGetitems } from '@/hooks/item';
 import { NaviTapType } from '@/types/lostItem';
+import { mapToItemCategory } from '@/utils/mapToItemCategory';
 import * as S from '@styles/lostItem/LostItemContainer';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LostItemComponent from './LostItemComponent';
 import LostItemNav from './LostItemNav';
 
 const LostItemContainer = () => {
   const [naviTap, setNaviTap] = useState<NaviTapType>('의류');
-  const DummyList = ['이름1', '이름2', '이름1', '이름2', '이름1', '이름2'];
+
+  const { data, refetch } = useGetitems(mapToItemCategory(naviTap));
+  useEffect(() => {
+    refetch();
+  }, [naviTap]);
+  const ItemList = data.data.information;
+  console.log(ItemList);
+
   return (
     <S.Container>
       <LostItemNav naviTap={naviTap} setNaviTap={setNaviTap} />
       <S.ItemContainer>
-        {DummyList.map((item, index) => (
+        {ItemList.map((item, index) => (
           <LostItemComponent item={item} key={index} />
         ))}
       </S.ItemContainer>

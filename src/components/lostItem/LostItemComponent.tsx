@@ -1,14 +1,13 @@
-import DummyLostImage from '@assets/images/lostItem/DummyLostImage.svg?react';
+import { LostItem } from '@/types/lostItem';
 import * as S from '@styles/lostItem/LostItemComponent';
 
-// const LostItemComponent = ({ item }: { item: LostItem }) => {
-const LostItemComponent = ({ item }: { item: string }) => {
+const LostItemComponent = ({ item }: { item: LostItem }) => {
   return (
     <S.Container>
       <S.ImageContainer>
-        <DummyLostImage width={'100%'} height={'132px'} />
+        <S.Image src={item.imageUrl} />
       </S.ImageContainer>
-      <S.Name>{item}</S.Name>
+      <S.Name>{item.title}</S.Name>
     </S.Container>
   );
 };

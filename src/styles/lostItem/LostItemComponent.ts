@@ -1,21 +1,32 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 27%;
-  height: 158px;
+  height: auto;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 10px;
+  cursor: pointer;
 `;
 
 export const ImageContainer = styled.div`
-  background: linear-gradient(
-    135deg,
-    #ffffff 0%,
-    #ffffff 100%
-  ); /* 그라데이션 배경 */
-  border-radius: 3px;
+  width: 100%;
+  height: 132px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 4px 10px rgba(141, 166, 212, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+`;
+
+export const Image = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 `;
 
 export const Name = styled.p`
