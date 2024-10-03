@@ -17,6 +17,8 @@ const AffiliatedItemTab = ({ preloadImages }: { preloadImages: string[] }) => {
     }
   };
 
+  let preloadIndex = 0;
+
   return (
     <S.Container>
       {AffiliatedItemList.map((data, index) => {
@@ -26,12 +28,14 @@ const AffiliatedItemTab = ({ preloadImages }: { preloadImages: string[] }) => {
             <p>{data.description}</p>
             <S.ItemWrap>
               {data.item.map((item, index) => {
+                const preloadImage = preloadImages[preloadIndex++];
+
                 return (
                   <ListItem
                     key={index}
                     data={item}
                     isDeep={true}
-                    preloadImage={preloadImages[index]}
+                    preloadImage={preloadImage}
                   />
                 );
               })}
