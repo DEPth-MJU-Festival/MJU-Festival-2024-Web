@@ -1,15 +1,12 @@
 import { getItems } from '@/apis/lostItems';
 import { ItemCategory, ItemResponse } from '@/types/lostItem';
-import {
-  useSuspenseQuery,
-  UseSuspenseQueryResult,
-} from '@tanstack/react-query';
+import { useQuery, UseQueryResult } from '@tanstack/react-query';
 
 export function useGetitems(
   category: ItemCategory,
-): UseSuspenseQueryResult<ItemResponse, Error> {
+): UseQueryResult<ItemResponse, Error> {
   const QUERY_KEY = 'items';
-  return useSuspenseQuery({
+  return useQuery({
     queryKey: [QUERY_KEY],
     queryFn: () => getItems(category),
   });

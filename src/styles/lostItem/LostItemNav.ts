@@ -1,3 +1,4 @@
+import { NaviTapType } from '@/types/lostItem';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -9,7 +10,7 @@ export const Container = styled.div`
   margin-bottom: 0;
 `;
 
-export const NavItem = styled.div<{ isActive: boolean }>`
+export const NavItem = styled.div<{ isActive: boolean; naviTap: NaviTapType }>`
   width: 100%;
   display: flex;
   justify-content: center;
@@ -27,7 +28,11 @@ export const NavItem = styled.div<{ isActive: boolean }>`
       ? 'var(--PastelBlue) 1.5px solid'
       : 'var(--PaleBlue) 1.5px solid'};
   border-left: ${props =>
-    props.isActive ? 'var(--PastelBlue) 1.5px solid' : ''};
+    props.isActive && props.naviTap !== '의류'
+      ? 'var(--PastelBlue) 1.5px solid'
+      : ''};
   border-right: ${props =>
-    props.isActive ? 'var(--PastelBlue) 1.5px solid' : ''};
+    props.isActive && props.naviTap !== '기타'
+      ? 'var(--PastelBlue) 1.5px solid'
+      : ''};
 `;

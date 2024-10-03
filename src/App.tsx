@@ -1,5 +1,4 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Suspense } from 'react';
 import Router from './Router';
 
 const App = () => {
@@ -15,9 +14,7 @@ const App = () => {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Suspense>
-          <Router />
-        </Suspense>
+        <Router />
       </QueryClientProvider>
     </>
   );
