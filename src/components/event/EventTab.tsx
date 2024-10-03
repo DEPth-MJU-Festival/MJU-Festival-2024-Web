@@ -30,6 +30,7 @@ const EventTab = forwardRef<HTMLDivElement, { preloadImages: string[] }>(
           isPrevDisabled={isPrevDisabled}
           handleNext={handleNext}
           isNextDisabled={isNextDisabled}
+          paddingTop="116.5%"
         />
         <NoticeTitleField data={EventList[selectedId]} />
         <S.CircleWrap>

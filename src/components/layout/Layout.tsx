@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 
 const Layout = () => {
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const handleResize = () => {
     setViewportHeight(window.innerHeight);
@@ -22,7 +23,24 @@ const Layout = () => {
   return (
     <S.Container style={{ minHeight: viewportHeight }}>
       <Header />
-      <img src={BannerImg} width="100%" />
+      <div
+        style={{ position: 'relative', width: '100%', paddingTop: '51.28%' }}
+      >
+        <img
+          src={BannerImg}
+          onLoad={() => setIsLoaded(true)}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            opacity: isLoaded ? 1 : 0,
+            transition: 'opacity 0.8s ease-in-out',
+          }}
+        />
+      </div>
       <Outlet />
       <S.FooterWrap>
         <Footer />

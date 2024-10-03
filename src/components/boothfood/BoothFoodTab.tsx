@@ -10,6 +10,7 @@ const BoothFoodTab = forwardRef<
   { preloadImage: string; navigationHeight: number }
 >(({ preloadImage, navigationHeight }, ref) => {
   const [selectedId, setSelectedId] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const preloadImages = [
@@ -31,7 +32,28 @@ const BoothFoodTab = forwardRef<
         tabTitles={['부스', '푸드트럭']}
         topContent={
           <S.MapWrap>
-            <img src={preloadImage} width="100%" />
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                paddingTop: '81.25%',
+              }}
+            >
+              <img
+                src={preloadImage}
+                onLoad={() => setIsLoaded(true)}
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: isLoaded ? 1 : 0,
+                  transition: 'opacity 0.8s ease-in-out',
+                }}
+              />
+            </div>
           </S.MapWrap>
         }
         tabContents={[

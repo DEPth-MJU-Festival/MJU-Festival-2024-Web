@@ -20,13 +20,14 @@ const LineupTab = forwardRef<HTMLDivElement, { preloadImages: string[] }>(
     };
 
     return (
-      <div ref={ref} style={{ minHeight: 550 }}>
+      <div ref={ref}>
         <ImgSwitcher
           img={preloadImages[selectedId]}
           handlePrev={handlePrev}
           isPrevDisabled={isPrevDisabled}
           handleNext={handleNext}
           isNextDisabled={isNextDisabled}
+          paddingTop="116.5%"
         />
         <NoticeTitleField data={LineupItem[selectedId]} />
         <S.CircleWrap>
