@@ -2,6 +2,7 @@ import Layout from '@components/layout/Layout';
 import MainPage from '@pages/MainPage';
 import NotFoundPage from '@pages/NotFoundPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NoticeDetailPage from './pages/NoticeDetailPage';
 import NoticePage from './pages/NoticePage';
 
 const Router = () => {
@@ -12,6 +13,7 @@ const Router = () => {
           <Route path="/" element={<MainPage />} />
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/notice" element={<NoticePage />} />
+          <Route path="/noticeDetail" element={<NoticeDetailPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
