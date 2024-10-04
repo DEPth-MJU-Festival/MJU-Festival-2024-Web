@@ -151,13 +151,13 @@ export const AffiliatedItemList = [
 export const BrandBoothList = [
   {
     title: '레드불',
-    location: '행정동 뒤 19번 부스',
+    location: '행정동 뒤',
     date: '운영 일시 : 10월 8일 12:00~19:00',
     description: '운영 내용 : 레드불 샘플링 및 이벤트 진행',
   },
   {
     title: 'BGN 밝은눈안과',
-    location: '행정동 뒤 18번 부스',
+    location: '행정동 뒤',
     date: '운영 일시 : 10월 7일~10월 8일 10:00~17:00',
     reference: '*당일 행사 진행에 따라 조기 마감될 수 있습니다.',
   },
