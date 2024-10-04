@@ -17,6 +17,7 @@ export const Circle = styled.div<{ $selected: boolean }>`
 
 export const DropdownWrap = styled.div`
   box-shadow: 0px 0px 8px 0px rgba(145, 156, 176, 0.3);
+  background-color: var(--White);
 `;
 
 export const DropdownTitle = styled.h1<{ $isLast: boolean }>`
@@ -30,10 +31,7 @@ export const DropdownTitle = styled.h1<{ $isLast: boolean }>`
     props.$isLast ? 'none' : '1.5px solid var(--SoftBlue)'};
 `;
 
-export const DropdownItemWrap = styled.div<{
-  $isDescription: boolean;
-  $selected: boolean;
-}>`
+export const DropdownItemWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,18 +40,9 @@ export const DropdownItemWrap = styled.div<{
   height: 50px;
   border-bottom: 1.5px solid var(--SoftBlue);
 
-  background-color: ${props =>
-    props.$isDescription ? 'var(--PaleBlue)' : 'var(--White)'};
-
   > h2 {
     color: var(--BlueBlack);
     font: var(--TapDefault);
-  }
-
-  & > svg {
-    transform: ${props =>
-      props.$selected ? 'rotate(270deg)' : 'rotate(90deg)'};
-    margin-bottom: 2px;
   }
 `;
 
