@@ -7,7 +7,7 @@ const SaeroMemberComponent = ({
 }: {
   position: string;
   name: string;
-  major: string;
+  major: string | null;
 }) => {
   return (
     <S.Container>
