@@ -41,9 +41,7 @@ export const SaeroMembers = [
     team: '교육 정책국',
     leader: '강은서',
     leaderInfo: '아동 22',
-    subLeader: null,
-    subLeaderInfo: null,
-    members: [
+    subLeader: [
       {
         name: '강연우',
         info: '디미 23',
@@ -53,6 +51,8 @@ export const SaeroMembers = [
         info: '정회 21',
       },
     ],
+    subLeaderInfo: null,
+    members: null,
   },
   {
     team: '시설 관리국',
@@ -93,7 +93,7 @@ export const SaeroMembers = [
     members: [
       {
         name: '최승윤',
-        info: '경영 23',
+        info: '경정 23',
       },
     ],
   },
